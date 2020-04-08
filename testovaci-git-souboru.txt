@@ -1,0 +1,2 @@
+radaka 1 jsem v testvoaci_branch
+Vetev master
