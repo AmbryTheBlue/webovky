@@ -1,0 +1,28 @@
+body {background-color: powderblue;}
+
+h3.zvyrazneni {color: blue; font-style: italic;}
+p.zvyrazneni {color: green; font-weight: bolder;}
+.zvyrazneni {text-shadow: 5px 2px 4px yellow; font: Arial}
+/* Napověda pro text-shadow:  offset-x | offset-y | blur-radius | color */
+
+/*Pseudo třídy:*/
+a:link{color: yellow}
+a:visited{color: green; }
+a:hover{color: red; background-color: green;cursor: crosshair;}
+a:active{color: blue;}
+
+/*část pro s2p1*/
+p:hover{color: green}
+.special:hover {text-align: center;}
+p.special:hover{color: blue; background-color: yellow}
+
+.dalsi {font-size: 200%;}
+.dalsi:hover {font-style: italic}
+.dalsi.special:hover {font-weight: bolder; font-size: 100%;}
+
+/*částo pro s2p2*/
+div.pr {display: none;}
+.ex:hover + div.pr {display: block; background-color: white}
+
+.pr2 + .ex2 {background-color: yellow}
+.pr2:hover + .ex2 {background-color: red; font-family: monospace;}
