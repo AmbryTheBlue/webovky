@@ -11,6 +11,10 @@ a:visited{color: green; }
 a:hover{color: red; background-color: green;cursor: crosshair;}
 a:active{color: blue;}
 
+/*Ukoly s1p1:*/
+
+
+
 /*část pro s2p1*/
 p:hover{color: green}
 .special:hover {text-align: center;}
@@ -18,7 +22,9 @@ p.special:hover{color: blue; background-color: yellow}
 
 .dalsi {font-size: 200%;}
 .dalsi:hover {font-style: italic}
-.dalsi.special:hover {font-weight: bolder; font-size: 100%;}
+.dalsi.special:hover {background-color: green;font-weight: bolder; font-size: 100%;}
+/*Ukoly s2p1:*/
+
 
 /*částo pro s2p2*/
 div.pr {display: none;}
