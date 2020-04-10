@@ -2,12 +2,14 @@ body {background-color: powderblue;}
 
 h3.zvyrazneni {color: blue; font-style: italic;}
 p.zvyrazneni {color: green; font-weight: bolder;}
+h5.zvyrazneni{color: blue; font-stretch: condensed;}
+h6.zvyrazneni{color:purple; font-weight: lighter;}
 .zvyrazneni {text-shadow: 5px 2px 4px yellow; font: Arial}
 /* Napověda pro text-shadow:  offset-x | offset-y | blur-radius | color */
 
 /*Pseudo třídy:*/
 a:link{color: yellow}
-a:visited{color: green; }
+a:visited{color: green;}
 a:hover{color: red; background-color: green;cursor: crosshair;}
 a:active{color: blue;}
 
@@ -24,7 +26,14 @@ p.special:hover{color: blue; background-color: yellow}
 .dalsi:hover {font-style: italic}
 .dalsi.special:hover {background-color: green;font-weight: bolder; font-size: 100%;}
 /*Ukoly s2p1:*/
+.ukol1{color: pink;text-indent: inherit;}
+.ukol1:hover{color: white}
+p.ukol1{font-size: 150%}
+ul.ukol1{font-kerning: auto;}
 
+.ukol2{color: brown}
+.ukol2:hover{color: grey; background: pink}
+.ukol1.ukol2{color: black;flex-direction: column-reverse;}
 
 /*částo pro s2p2*/
 div.pr {display: none;}
