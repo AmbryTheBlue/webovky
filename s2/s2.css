@@ -32,6 +32,8 @@ div.pr {display: none;}
 
 .pr2 + .ex2 {background-color: yellow}
 .pr2:hover + .ex2 {background-color: red; font-family: monospace;}
+/* Ukoly:*/
+.skryty {display: none;}
 
 
 /*část pro s2p3 */
