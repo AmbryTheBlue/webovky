@@ -7,20 +7,75 @@
   </head>
   <body>
     <h1>Ovlivňování dalších prvků stránky 2</h1>
-    <h2>Hoverable Dropdown</h2>
-
+    <h2>Vztah dítě, rodič a sourozenec</h2>
+    <img src="../obrazky/typy-provazani.png" alt="Obrazek s typy provazanání tagů">
+    <h3>Společný parent</h3>
     <div class="dropdown">
       <p>Paragraf na najeti mysi</p>
     </div>
-    <p>Nějak to dělá ten postion: relative/ absolute ale nevím jak :D </p>
-
+    <p>Něco dělá ten postion: relative/ absolute ale nevím jak :D </p>
     <div class="dropdown-content">
       <p>Paragraf zobrazený po najetí myši</p>
     </div>
+    <h4>Společný parent</h4>
+    <div class="zvyrazneni">
+      <div class="dropdown">
+        <p>Paragraf na najeti mysi</p>
+      </div>
+      <p>Překážecí paragraf</p>
+      <div class="dropdown-content">
+        <p>Paragraf zobrazený po najetí myši</p>
+      </div>
+    </div>
+
+    <h3>Společný parent, Přímo za sebou</h3>
+    <div class="dropdown">
+      <p>Paragraf na najeti mysi</p>
+    </div>
+    <div class="dropdown-content">
+      <p>Paragraf zobrazený po najetí myši</p>
+    </div>
+
+    <h3>V sobě</h3>
+    <div class="dropdown">
+      <p>Paragraf na najeti mysi</p>
+      <p>Překážecí paragraf</p>
+      <div class="dropdown-content">
+        <p>Paragraf zobrazený po najetí myši</p>
+      </div>
+    </div>
+
+    <h3>V sobě ale mezi nimi další třída</h3>
+    <div class="dropdown">
+      <p>Paragraf na najeti mysi</p>
+      <div class="zvyrazneni">
+        <p>Překážecí paragraf</p>
+        <div class="dropdown-content">
+          <p>Paragraf zobrazený po najetí myši</p>
+        </div>
+      </div>
+      </div>
+    <h2>Úkoly</h2>
+
+    <ul>
+      <li>Vyzokušej ' ', '+', '>' a '~'! Predikuj výsledky</li>
+      <li>Jaký je nejlepší pro vytvoření menu?</li>
+      <li> <span style="font-weight: bold; color: red;">Veliký úkol:  </span>Vytvoř dva paragrafy, po najetí na jeden se změní barva druhému. Po najetí na drihý se změní barva prvnímu.<br> <img src="../obrazky/veliky-ukol.png" alt="Veliký úkol"> </li>
+    </ul>
+
+    <h3>Prostor pro Veliký úkol</h3>
+
+
+
 
     <h2>Odkazy</h2>
     <a href="s2p2.html">Předchozí část</a>
     <a href="../main.html">hlavní stránka</a>
     <a href="s2p4.html">Další část</a>
+    <h3>Další zdroje</h3>
+    <ul>
+      <li> <a href="https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered"> stackoverflow komentáč</a> </li>
+      <li><a href="https://www.w3schools.com/Css/css_dropdowns.asp">w3schools.com</a></li>
+    </ul>
   </body>
 </html>

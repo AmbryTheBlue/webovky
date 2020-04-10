@@ -30,16 +30,21 @@ div.pr {display: none;}
 
 /*část pro s2p3 */
 .dropdown {
-   position: relative;
+  /*position: absolute;*/
   display: inline-block;
 }
 .dropdown-content {
   display: none;
-  position: absolute;
+  /*position: relative;*/
   background-color: yellow;
   min-width: 160px;
 }
-
+/*Zkoušej zde:*/
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+
+
+/* část pro s2p4*/
