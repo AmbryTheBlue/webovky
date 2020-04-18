@@ -1,0 +1,23 @@
+body {background-color: powderblue}
+/*Pro p0*/
+input[value="1"] {height: 100px;
+width: 200px;
+}
+input:checked {height: 50px;
+width: 50px;
+}
+option:checked {background-color: yellow}
+h3 {border-style: solid;
+border-width: medium;
+border-color: red;}
+h1 { border-style: dotted;
+  border-radius: 15px;
+  border-width: 3px;
+  border-bottom-width: 8px;
+  border-color: blue;
+}
+input[name="ukol5"] {width: 500px}
+
+
+
+/* pro dlouhy-soubor2.html */

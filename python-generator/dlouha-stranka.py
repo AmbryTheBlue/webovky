@@ -1,4 +1,5 @@
-
+#Ambry
+#Python 3.6 ?
 pozice = [0,0,0,0,0,0,0]
 
 def posun(pole, h):
