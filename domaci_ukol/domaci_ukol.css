@@ -1,0 +1,39 @@
+h1{border-style: dashed;
+  border-radius: 15px;
+  border-radius: 7px;
+  border-color: #000066}
+
+/*domací ukol 1*/
+.body1{background: #ccccff}
+.nadpis1{background: #9966ff;text-shadow: grey 2px 2px 5px}
+.kurzor1{cursor: cell;}
+
+
+/*domácí ukol 2*/
+.body2{background: #809fff}
+.nadpis2{background: #1a75ff}
+.kurziva:hover{font-style: italic;}
+.tucne{}
+
+.kurziva:hover + .tucne{font-weight: bold;}
+
+.zmena:hover{cursor: alias;color: #e6e6ff}
+
+.najeti{
+  position: relative;
+  display: block;
+}
+.najeti2{
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.najeti:hover .najeti2{display: block;}
+
+
+/*domácí úkol 3*/
+.body3{background: #70db70}
+.nadpis3{background: #009933}
