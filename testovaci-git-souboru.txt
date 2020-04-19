@@ -1,2 +1,4 @@
 
 Vetev master
+
+priprava na revert
