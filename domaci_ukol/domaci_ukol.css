@@ -13,7 +13,7 @@ h1{border-style: dashed;
 .body2{background: #809fff}
 .nadpis2{background: #1a75ff}
 .kurziva:hover{font-style: italic;}
-.tucne{}
+.tucne:hover{font-style: italic;}
 
 .kurziva:hover + .tucne{font-weight: bold;}
 
@@ -21,7 +21,7 @@ h1{border-style: dashed;
 
 .najeti{
   position: relative;
-  display: block;
+  display: inline-block;
 }
 .najeti2{
   display: none;
@@ -35,7 +35,7 @@ h1{border-style: dashed;
 
 .najetii{
   position: relative;
-  display: block;
+  display: inline-block;
 }
 
 .najetii2{
