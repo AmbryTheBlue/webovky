@@ -33,7 +33,53 @@ h1{border-style: dashed;
 }
 .najeti:hover .najeti2{display: block;}
 
+.najetii{
+  position: relative;
+  display: block;
+}
+
+.najetii2{
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+
+.najetii:hover .najetii2{display: block;}
+
+.link{border-style: inset; border-color: #000066}
+
 
 /*domácí úkol 3*/
 .body3{background: #70db70}
 .nadpis3{background: #009933}
+
+span.sticky{
+  font-size: 200%;
+  width: 145px;
+  height: 23px;
+  position: sticky;
+  top: 0;
+  border-style: double;
+  border-width: thick;
+  border-color: #003300;
+  background-color: #009900;
+}
+
+.cast9{
+  border-style: inset;
+  border-width: thin;
+  border-color: #00ff80;
+  background-color: #b3ffd9;
+  width: 360px;
+  height: 310px;
+  display: block;
+}
+
+.prichyceny{
+  position: fixed;
+  right: 15%;
+  top: 33%;
+}
