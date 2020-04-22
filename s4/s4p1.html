@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="s4.css">
+    <title>JavaScript</title>
+    <script >
+      function zelenaFunkce() {
+        document.getElementById("ovlivneny").style.color = "green";
+      }
+    </script>
+
+    <script src="p1.js">
+    </script>
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <ul>
+      <li>Nemá nic společného s Javou, jak již jméno ECMAScript napovídá</li>
+      <li>Je to programovací jazyk -> umí podmínky a smyčky</li>
+      <li>Nový tag: script </li>
+      <li>Může měnit vzhled i obsah stránky</li>
+
+    </ul>
+    <h2>Tlačítka</h2>
+    <p>Je několik způsobů jak provázat JS a HMTL stránku</p>
+    <button type="button" onclick='document.getElementById("ovlivneny").style.color = "red"' >Klikni mě pro červenou barvu</button> <br>
+    <p onclick='zelenaFunkce()' >Klikni mě pro zelenou zelenou</p>
+    <button type="button" onclick="modraFunkce()"> A modrou barvu</button>
+
+  <div id ="ovlivneny">
+    <h2>Tady ty objekty jsou ve třídě, která je ovlivněná</h2>
+    <p>Paragraf, který je paragrafem</p>
+    <ul>
+      <li>seznam</li>
+      <li>o třech</li>
+      <li>prvcích</li>
+    </ul>
+  </div>
+  <h2>Úkoly</h2>
+  <ul>
+    <li>Vytvoř další tlačíko na změnu barvy toho div id="ovlivneny" na barvu tvé volby</li>
+    <li id="ukol2"> Vytvoř nové tlačítko, které bude měnit barvu tohoto textu</li>
+  </ul>
+  <h1>Odkazy</h1>
+  <a href="../main.html">hlavní stránka</a> <br>
+  <a href="s4p2.html">Další část</a>
+  <h3>Další zdroje</h3>
+  <ul>
+  <li> <a href="https://www.w3schools.com/js/js_examples.asp">Příklady javascriptu</a> z w3schools </li>
+
+
+  </ul>
+
+
+  </body>
+</html>
