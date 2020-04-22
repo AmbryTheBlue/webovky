@@ -54,7 +54,7 @@
     var z = x + y; //zde si vyzkousej ruzne operatory
     document.getElementById("vlozeny").innerHTML = z;
     //zmena hodnoty bez problemu
-    x= 30/x;
+    x = 30/x;
     x = (0.5 * x - 3)*2;
     document.getElementById("vlozeny1").innerHTML = x;
 
@@ -62,17 +62,18 @@
     var text2 = "Nazdar";
     document.getElementById("vlozeny2").innerHTML = text + text2;
     document.getElementById("vlozeny3").innerHTML = text2 + text;
+
     //co cislo a text
     var cislo = "222";
     document.getElementById("vlozeny4").innerHTML = text + cislo;
     document.getElementById("vlozeny5").innerHTML = text + z;
+
     //A ted magie
     var soucet1 = 0;
     soucet1 = z + cislo;
-    var soucet2 = cislo + z;
+    var soucet2 = cislo * z;
     document.getElementById("vlozeny6").innerHTML = soucet1;
     document.getElementById("vlozeny7").innerHTML = soucet2;
-
   </script>
   </body>
 </html>

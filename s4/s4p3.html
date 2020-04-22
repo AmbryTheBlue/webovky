@@ -38,13 +38,14 @@
     <ul>
       <li>Urči pro jaká $a$ nastane větev else</li>
       <li>Pro 2 čísla x,y vytovř podmínky, tak aby dokázali určit:<ul>
-        <li>Jsou-li si čísla rovny</li>
-        <li>Které z nich je větší</li>
-        <li>Jsou-li si absolutní hodnoty těchto čísel rovny</li>
-        <li>Je-li alespoň jedno číslo rovno 12</li>
-        <li>Je-li právě jedno číslo menší než nula</li>
+        <li>Jsou-li si čísla rovna: <span id="rovnost"></span> </li>
+        <li>Jsou-li si absolutní hodnoty těchto čísel rovny: <span id="absultuni"></span> </li>
+        <li>Je-li alespoň jedno číslo rovno 12: <span id="dvanact"></span> </li>
+        <li>Alespoň jedno číslo menší než nula: <span id="jedno_zaporne"></span> </li>
+        <li>Právě jedno číslo je menší než nula <span id ="prave_jedno_zaporne"></span> </li>
+        <li>Právě jedno číslo je menší než nula <span id ="prave_jedno_zaporne2"></span> </li>
+        <li>Právě jedno číslo je menší než nula <span id ="prave_jedno_zaporne3"></span> </li>
       </ul></li>
-
   </ul>
   <p id ="ukol2"></p>
 
@@ -83,7 +84,7 @@
     }
 
     //logické operátory
-    // Logické Ano
+    // Logické A
     if(t1 && t2){
       document.getElementById("vlozeny4").innerHTML = "t1 i t2 jsou pravda";
     }
@@ -98,14 +99,14 @@
         document.getElementById("vlozeny6").innerHTML = "t1 je pravda";
       }
       else{
-        document.getElementById("vlozeny6").innerHTML = "f1 je pravda";
+        document.getElementById("vlozeny6").innerHTML = "t1 je nepravda";
       }
     }
     else {
       document.getElementById("vlozeny5").innerHTML = "Ani jeden není pravda";
     }
     //porovnávací operátory
-    var a = 52
+    var a = 52;
     if (a>100){
       document.getElementById("vlozeny7").innerHTML = "Číslo a je veliké";
     }
@@ -122,10 +123,79 @@
       document.getElementById("vlozeny7").innerHTML = "Číslo a je jaké?";
     }
     var x = 12;
-    var y = 23;
-    if(x>10 && y>10){
+    var y = "haf";
+    if(x>10 && y=="haf"){
       document.getElementById("ukol2").innerHTML = "Obě čísla jsou větší než 10";
     }
+    else {
+      document.getElementById("vlozeny7").innerHTML = "Baf";
+    }
+
+    var q = 2;
+    var p = 12;
+    if (q==p) {document.getElementById("rovnost").innerHTML = "rovnají se";
+  }
+  else {
+    document.getElementById("rovnost").innerHTML = "nerovnají se";
+  }
+  if (q==p) {document.getElementById("absultuni").innerHTML = "rovnají se";
+
+    }
+    else if (-q==p) {document.getElementById("absultuni").innerHTML = "rovnají se";
+  }
+    else {
+      document.getElementById("absultuni").innerHTML = "nerovnají se";
+    }
+    if (p==12||q==12) {document.getElementById("dvanact").innerHTML = " alepoň jeden se rovná 12";
+    }
+    else {
+      document.getElementById("dvanact").innerHTML = "ani jeden se nerovná 12";
+    }
+if (p<0||q<0) {document.getElementById("jedno_zaporne").innerHTML = "alespon jeden je menší než nula";
+
+}
+else {
+  document.getElementById("jedno_zaporne").innerHTML = "ani jeden není menší než nula";
+}
+
+if (p<0&&q>=0) {document.getElementById("prave_jedno_zaporne").innerHTML = "právě jedno je záporné";
+  }
+else if (p>=0&&q<0) {document.getElementById("prave_jedno_zaporne").innerHTML = "právě jedno je záporné";
+  }
+else {
+  document.getElementById("prave_jedno_zaporne").innerHTML = "není pravda";
+}
+
+if (p<0) {
+  if (q>=0) {
+    document.getElementById("prave_jedno_zaporne2").innerHTML = "Právě jedno je záporné";
+  }
+  else {
+    document.getElementById("prave_jedno_zaporne2").innerHTML = "Není pravda";
+  }
+}
+else {
+  if (q<0) {
+    document.getElementById("prave_jedno_zaporne2").innerHTML = "Právě jedno je záporné";
+  }
+  else {
+    document.getElementById("prave_jedno_zaporne2").innerHTML = "Není pravda";
+  }
+}
+
+if( (p<=0 && q>0) || (p>0 && q<=0)){
+  document.getElementById("prave_jedno_zaporne2").innerHTML = "Právě jedno je záporné";
+}
+else{
+  document.getElementById("prave_jedno_zaporne2").innerHTML = "Není pravda";
+}
+
+if( (p<0 || q<0) && (p>=0 || q>=0) ){
+  document.getElementById("prave_jedno_zaporne3").innerHTML = "Právě jedno je záporné";
+}
+else{
+  document.getElementById("prave_jedno_zaporne3").innerHTML = "Není pravda";
+}
 
   </script>
   </body>
