@@ -3,17 +3,23 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="s4.css">
-    <title>JavaScript 2 </title>
+    <title>JavaScript 3</title>
 
   </head>
   <body>
     <h1>JavaScript</h1>
-    <h2>true/false a 'if', 'else if' a 'else'</h2>
+    <h2>true/false</h2>
     <ul>
       <li>Pravda a nepravda jsou pravdivostní hodnoty</li>
-      <li>Jdou s nimi provádět operace jako 'a' a 'nebo'</li>
+      <li>Jdou s nimi provádět logické operace jako 'a' a 'nebo'</li>
+      <li>Můžeme je získat z jiných proměnných pomocí takzvaných porovnácacích operátorů</li>
     </ul>
-
+    <h2>'if', 'else if' a 'else'</h2>
+    <ul>
+      <li>if je jednoduché pokud platí (tj. je pravdivý) výraz v závorce, tak prověď kód v složených závorkách</li>
+      <li>Dá se kombinovat s else, které se provede pokud není podmínka splněna</li>
+      <li>'else if', které provede kód ve složených závrokách, pokud předchozí podmínka neplatí a pokud platí podmínka v kulatých závorkách</li>
+    </ul>
     <h2>Výstupy</h2>
     <h4>Jednoduché podmínky</h4>
     <p id="vlozeny">Sem se vloží něco pomocí javascriptu</p>
@@ -44,11 +50,11 @@
   <h1>Odkazy</h1>
   <a href="s4p1.html">Předchozí část</a> <br>
   <a href="../main.html">hlavní stránka</a> <br>
-  <a href="s4p4.html">Další část</a>
+  <a href="s4p4.html">Další část - neexistuje</a>
   <h3>Další zdroje</h3>
   <ul>
   <li> <a href="https://www.w3schools.com/js/js_if_else.asp">if else syntax</a></li>
-  <li> <a href="#"></a> </li>
+  <li> <a href="https://www.w3schools.com/js/js_booleans.asp">Boolean a tak</a> </li>
   </ul>
   <p id ="ukol2"></p>
 
@@ -98,7 +104,7 @@
     else {
       document.getElementById("vlozeny5").innerHTML = "Ani jeden není pravda";
     }
-    //porovnávací oprátory
+    //porovnávací operátory
     var a = 52
     if (a>100){
       document.getElementById("vlozeny7").innerHTML = "Číslo a je veliké";
@@ -120,9 +126,6 @@
     if(x>10 && y>10){
       document.getElementById("ukol2").innerHTML = "Obě čísla jsou větší než 10";
     }
-
-  </script>
-  <script >
 
   </script>
   </body>
