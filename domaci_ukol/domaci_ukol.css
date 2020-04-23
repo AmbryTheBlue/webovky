@@ -83,3 +83,22 @@ span.sticky{
   right: 15%;
   top: 33%;
 }
+
+/*Kalkukačka*/
+.kalkukacka1{border-style: groove;
+border-color: #003366;
+background-color: #00cc99;
+width: 380px;}
+.uzavrit{
+  border-style: dotted;
+  border-width: medium;
+  border-spacing: 50px;
+  border-color: #282828;
+  background: #A8A8A8;
+  width: 400px;
+  height: auto;
+}
+.posun{
+  position: absolute;
+  left: 5%
+}
