@@ -36,17 +36,18 @@
 <ul>
 <li><p>a = <input type="text" name="konstanta" value="" placeholder="konstanta a"> </p>
   <p>b = <input type="text" name="konstanta" value="" placeholder="konstanta b"> </p>
-  <p>c = <input type="text" name="konstanta" value=""placeholder="konstanta c"> </p></li>
-<li>Je kořen reálný?:</li>
-<li>Diskriminant:</li>
+  <p>c = <input type="text" name="konstanta" value=""placeholder="konstanta c"> </p>
+<input type="submit" name="text" value="vypočítat"> </li>
+<li>Je kořen reálný?: <span id="Diskriminant"></span> </li>
+<li>Diskriminant: <span id="diskriminant1"></span> </li>
 <li>Hodnoty kořene: <ul>
                       <li>Reálná část: <ul>
-                        <li>x<span class="index_dolni1">1 =</span></li>
-                        <li>x<span class="index_dolni1">2 =</span> </li>
+                        <li>x<span class="index_dolni1">1 = <span id="rkoren1"></span> </span></li>
+                        <li>x<span class="index_dolni1">2 = <span id="rkoren2"></span> </span> </li>
                       </ul> </li>
                       <li>Imaginární část:<ul>
-                        <li>x<span class="index_dolni1">1 =</span></li>
-                        <li>x<span class="index_dolni1">2 =</span></li>
+                        <li>x<span class="index_dolni1">1 = <span id="ikoren1"></span> </span></li>
+                        <li>x<span class="index_dolni1">2 = <span id="ikoren2"></span> </span></li>
                       </ul>
                       </li>
                       </ul> </li>
@@ -109,6 +110,42 @@
   <p>a,b,c</p>
   <p>a,b,c</p>
   <p>a,b,c</p>
+
+  <script>
+    var a = Number(document.getElementById("myText_a").value);
+    var b = Number(document.getElementById("myText_b").value);
+    var c = Number(document.getElementById("myText_c").value);
+
+    var y=a*x^2 + b*x + c
+
+    var d= b^2 - 4*a*c;
+
+    if (d<=0) {
+      document.getElementById("Diskriminant").innerHTML="Ano";
+    }
+    else {
+      document.getElementById("Diskriminant").innerHTML="Ne";
+    }
+
+    document.getElementById("diskriminant1").innerHTML=b^2 - 4*a*c;
+
+if (d>=0) {
+  document.getElementById("rkoren1").innerHTML=(-b+ sqrt(d))/2*a;
+}
+else {
+  document.getElementById("ikoren1").innerHTML=(-b + "i" sqrt(abs(d)))/2*a;
+}
+
+if (d>=0) {
+  document.getElementById("rkoren2").innerHTML= =(-b - sqrt(d))/2*a;
+}
+else {
+  document.getElementById("ikoren1").innerHTML=(-b - "i" sqrt(abs(d)))/2*a;
+}
+
+
+
+  </script>
 
   <a href="domaci_ukol1.html">domácí úkol 1</a>
   <a href="domaci_ukol2.html">domácí úkol 2</a>
