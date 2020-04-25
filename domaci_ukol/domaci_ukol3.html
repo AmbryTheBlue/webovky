@@ -3,6 +3,42 @@
   <title>Domácí úkol 3</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="domaci_ukol.css">
+  <script>
+  function test(){
+    alert("test");
+    console.log("Velky test!");
+  }
+  function funkce(){
+    var a = Number(document.getElementById("myText_a").value);
+    var b = Number(document.getElementById("myText_b").value);
+    var c = Number(document.getElementById("myText_c").value);
+    //y = a*(x**2) + b*x + c;
+
+    var d = b**2 - 4*a*c;
+    document.getElementById("diskriminant1").innerHTML=d;
+
+
+if (d>0) {
+  document.getElementById("Diskriminant").innerHTML="Ano";
+  document.getElementById("rkoren1").innerHTML=(-b+ Math.sqrt(d))/(2*a);
+  document.getElementById("rkoren2").innerHTML=(-b - Math.sqrt(d))/(2*a);
+}
+else if(d==0){
+document.getElementById("Diskriminant").innerHTML="Ano";
+}
+else {
+  var realna = -b/(2*a);
+  var imaginarni = (Math.abs(d)**0.5)/(2*a);
+  var i= "i";
+  realna = realna.toString();
+  var imaginarni1 = "+ " + imaginarni;
+  var imaginarni2 = "- " + imaginarni;
+  document.getElementById("Diskriminant").innerHTML="Ne";
+  document.getElementById("ikoren1").innerHTML=realna+imaginarni1+i;
+  document.getElementById("ikoren2").innerHTML= realna+imaginarni2+i;
+}
+}
+  </script>
 </head>
 
 <body class="body3">
@@ -25,6 +61,10 @@
                     <option value="něco 3">Jíst</option>
                   </select> </li>
 </ul>
+
+
+
+
   </form>
   <p>Toto okno má být popsané nějak.</p>
 </div>
@@ -34,10 +74,14 @@
 <h4>Řešení kvadratické rovnice</h4>
 <form>
 <ul>
-<li><p>a = <input type="text" name="konstanta" value="" placeholder="konstanta a"> </p>
-  <p>b = <input type="text" name="konstanta" value="" placeholder="konstanta b"> </p>
-  <p>c = <input type="text" name="konstanta" value=""placeholder="konstanta c"> </p>
-<input type="submit" name="text" value="vypočítat"> </li>
+<li><p>a = <input type="text" name="konstanta" value="" id="myText_a" placeholder="konstanta a"> </p>
+  <p>b = <input type="text" name="konstanta" value="" id="myText_b" placeholder="konstanta b"> </p>
+  <p>c = <input type="text" name="konstanta" value="" id="myText_c" placeholder="konstanta c"> </p>
+
+
+</ul>
+</form>
+<button type="button" name="button" onclick="funkce()">Zkus toto</button>
 <li>Je kořen reálný?: <span id="Diskriminant"></span> </li>
 <li>Diskriminant: <span id="diskriminant1"></span> </li>
 <li>Hodnoty kořene: <ul>
@@ -51,8 +95,7 @@
                       </ul>
                       </li>
                       </ul> </li>
-</ul>
-</form>
+
 </div>
 
   <p>a,b,c</p>
@@ -111,41 +154,7 @@
   <p>a,b,c</p>
   <p>a,b,c</p>
 
-  <script>
-    var a = Number(document.getElementById("myText_a").value);
-    var b = Number(document.getElementById("myText_b").value);
-    var c = Number(document.getElementById("myText_c").value);
 
-    var y=a*x^2 + b*x + c
-
-    var d= b^2 - 4*a*c;
-
-    if (d<=0) {
-      document.getElementById("Diskriminant").innerHTML="Ano";
-    }
-    else {
-      document.getElementById("Diskriminant").innerHTML="Ne";
-    }
-
-    document.getElementById("diskriminant1").innerHTML=b^2 - 4*a*c;
-
-if (d>=0) {
-  document.getElementById("rkoren1").innerHTML=(-b+ sqrt(d))/2*a;
-}
-else {
-  document.getElementById("ikoren1").innerHTML=(-b + "i" sqrt(abs(d)))/2*a;
-}
-
-if (d>=0) {
-  document.getElementById("rkoren2").innerHTML= =(-b - sqrt(d))/2*a;
-}
-else {
-  document.getElementById("ikoren1").innerHTML=(-b - "i" sqrt(abs(d)))/2*a;
-}
-
-
-
-  </script>
 
   <a href="domaci_ukol1.html">domácí úkol 1</a>
   <a href="domaci_ukol2.html">domácí úkol 2</a>
