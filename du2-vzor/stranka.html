@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>Kuželosečkátor</title>
+    <script>
+      function kruzniceInfo(){
+        var text = "<h2>Kruznice!</h2>"
+        text += "x**2 + y**2 - 2mx - 2ny + p = 0 <br> m**2 + n**2 - p > 0 <br> S[m,n], r = (m**2 + n**2 -p)**0.5";
+        document.getElementById("informace").innerHTML = text;
+      }
+      function elipsaInfo(){
+        var text = "<h2>Elipsa!</h2>"
+        text = text + "px**2 + qy**2 + 2rx + 2sy + t = 0 <br> q > p > 0 <br> qr**2 + ps**2 -pqt >0";
+        document.getElementById("informace").innerHTML = text;
+      }
+      function hyperbolaInfo(){
+        var text = "<h2>Hyperbola!</h2>"
+        text = text + "px**2 + qy**2 + 2rx + 2sy + t = 0 <br> pq < 0 <br> qr**2 + ps**2 -pqt  != 0";
+        document.getElementById("informace").innerHTML = text;
+      }
+      function parabolaInfo(){
+        var text = "<h2>Parabola!</h2>"
+        text += "y**2 + 2rx + 2sy + t = 0 <br> r != 0 <br> nebo: <br> x**2 + 2rx + 2sy + t = 0  <br>  s != 0 ";
+        document.getElementById("informace").innerHTML = text;
+      }
+      function test(){
+        alert("Hello! I am an alert box!!");
+      }
+      function bez(){
+      var a = Number(document.getElementById("vstup_a").value);
+      var b = Number(document.getElementById("vstup_b").value);
+      var c = Number(document.getElementById("vstup_c").value);
+      var d = Number(document.getElementById("vstup_d").value);
+      var e = Number(document.getElementById("vstup_e").value);
+      var m =0;
+      var n =0;
+      var p =0;
+      var q=0;
+      var r =0;
+      var s =0;
+      var t =0;
+      var text = "";
+
+      if (a == b) {
+        //muze byt kruznici
+         //a = a/a;
+         //b =b/a;
+         m = -(c/a)/2;
+         n = -(d/a)/2;
+         p = e/a;
+         //vydeleni, aby bylo upraveno do tvaru kde je a i b rovno 1 - jen v tomto tvaru existuje kruznice a uprava do tvau v tabulkach
+         if (m**2 + n**2 -p >0) {
+           alert("Je to kružnice!")
+           kruzniceInfo();
+           text = "<h3>Řešení</h3>"
+           text += "m = " + m + "<br>";
+           text += "n = " + n + "<br>";
+           text += "p = " + p + "<br>";
+           document.getElementById("reseni").innerHTML = text;
+         }
+         else {
+           alert("Není to kružnice!");
+         }
+       }
+      //Hlavni podminkovy strom
+      if( (a==0 || b==0) && !(a==b)){
+      // muze byt parabola
+      if(a==0){
+        p = 0;
+        q = b/b;
+        r = c/b/2;
+        s = d/b/2;
+        t = e/b;
+      }
+      else if(b==0){
+        p = a/a;
+        q = 0;
+        r = c/a/2;
+        s = d/a/2;
+        t = e/a;
+      }
+
+      if ((p==0 && q == 1 && r != 0)||(p ==1 && q==0 && s != 0)){
+        //Je to elipsa
+        alert("Je to parabola!");
+        parabolaInfo();
+        text = "<h3>Řešení</h3>"
+        text += "p = " + p + "<br>";
+        text += "q = " + q + "<br>";
+        text += "r = " + r + "<br>";
+        text += "s = " + s + "<br>";
+        text += "t = " + t + "<br>";
+        document.getElementById("reseni").innerHTML = text;
+      }
+    else {
+      alert("Není to parabola");
+    }
+    }
+    p = a;
+      q = b;
+      r = c/2;
+      s = d/2;
+      t = e;
+      if (q>p && p>0 && q*r**2 + p*s**2 -p*q*t >0){
+        //Je to elipsa
+        alert("Je to elipsa!");
+        elipsaInfo();
+        text = "<h3>Řešení</h3>"
+        text += "p = " + p + "<br>";
+        text += "q = " + q + "<br>";
+        text += "r = " + r + "<br>";
+        text += "s = " + s + "<br>";
+        text += "t = " + t + "<br>";
+        document.getElementById("reseni").innerHTML = text;
+    }
+    else if (p*q<0 && q*r**2 + p*s**2 -p*q*t != 0){
+      //Je to elipsa
+      alert("Je to hyperbola!")
+      hyperbolaInfo();
+      text = "<h3>Řešení</h3>"
+      text += "p = " + p + "<br>";
+      text += "q = " + q + "<br>";
+      text += "r = " + r + "<br>";
+      text += "s = " + s + "<br>";
+      text += "t = " + t + "<br>";
+      document.getElementById("reseni").innerHTML = text;
+  }
+  else{
+    alert("Není to hyperbola nebo elipsa!")
+  }
+}
+
+
+
+    </script>
+
+  </head>
+  <body>
+    <h1>Vstupy</h1>
+      <p>Uprav rovnici do formátu: a x**2 + b y**2 + cx + dy + e = 0</p>
+     <form class="vstupy">
+       <input type="text" id="vstup_a" value="" placeholder="a">
+       <input type="text" id="vstup_b" value="" placeholder="b">
+       <input type="text" id="vstup_c" value="" placeholder="c">
+       <input type="text" id="vstup_d" value="" placeholder="d">
+       <input type="text" id="vstup_e" value="" placeholder="e">
+       <input type="submit" name="submit" value="Submitovací tlačítko - nefunhuje" onclick="bez()"">
+     </form>
+     <button type="button" name="button" onclick="bez()">Normální tlačítko - funguje</button>
+
+     <div id="reseni">Řešení</div>
+    <div id="informace">Informace</div>
+
+
+
+    <h1>Obecná rovnice všech kuželoseček</h1>
+<h2>Kruznice!</h2>
+    x**2 + y**2 - 2mx - 2ny + p = 0 <br> m**2 + n**2 - p > 0 <br> S[m,n], r = (m**2 + n**2 -p)**0.5
+    <h2>Elipsa!</h2>
+    px**2 + qy**2 + 2rx + 2sy + t = 0 <br> q > p > 0 <br> qr**2 + ps**2 -pqt >0
+    <h2>Hyperbola!</h2>
+    px**2 + qy**2 + 2rx + 2sy + t = 0 <br> pq < 0 <br> qr**2 + ps**2 -pqt  != 0
+    <h2>Parabola!</h2>
+    y**2 + 2rx + 2sy + t = 0 <br> r != 0 <br> nebo: <br> x**2 + 2rx + 2sy + t = 0  <br>  s != 0
+
+
+
+  </body>
+</html>
