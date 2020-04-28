@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Cykly</title>
+
+  </head>
+  <body>
+    <h1>Cykly</h1>
+    <ul>
+      <li>2 základní typy for a while</li>
+    </ul>
+    <h2>Smycka 1</h2>
+  <div id ="ovlivneny1">
+
+  </div>
+  <h2>Smycka 2</h2>
+  <div id ="ovlivneny2">
+
+  </div>
+  <h2>Smycka 3</h2>
+  <div id ="ovlivneny3">
+
+  </div>
+  <h2>Úkoly</h2>
+  <ul>
+    <li>Vytvoř smyčku, která začne na 40</li>
+    <li> Vytvoř smyčku, která půjde sesetupně k 20</li>
+    <li>Vytvoř smyčku, která půjde po 3 paragrafech</li>
+  </ul>
+  <h1>Odkazy</h1>
+  <a href="../main.html">hlavní stránka</a> <br>
+  <a href="s5p2.html">Další část</a>
+  <h3>Další zdroje</h3>
+  <ul>
+    <li>prázdno</li>
+  </ul>
+
+  <script>
+  var opakovani = 20;
+  var krok = 1;
+  var nyni = 0;
+  var text1 = "";
+  var text2 = "";
+  var text3 = "";
+  alert("ahoj");
+  while (nyni < opakovani) {
+    text1 +=  "<p>" + nyni + ". paragraf</p>";
+    nyni = nyni + krok; //nyni = nyni +1;  -> nyni += 1; -> nyni++;
+  }
+  for (var i = 0; i < opakovani; i++) {
+      text2 +=  "<p>" + i + ". paragraf</p>";
+  }
+  for (var i = 1; i < opakovani; i = i + 2) {
+    text3 = text3 + "<p> překážecí paragraf </p>";
+      text3 +=  "<p>" + (i+1) + ". paragraf</p>";
+  }
+  document.getElementById("ovlivneny1").innerHTML = text1;
+  document.getElementById("ovlivneny2").innerHTML = text2;
+  document.getElementById("ovlivneny3").innerHTML = text3;
+
+  </script>
+
+  </body>
+</html>
