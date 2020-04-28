@@ -23,10 +23,22 @@
   <div id ="ovlivneny3">
 
   </div>
+  <h2>Smyčka 4</h2>
+  <div id ="ovlivneny4">
+
+  </div>
+  <h2>Smyčka 5</h2>
+  <div id ="ovlivneny5">
+
+  </div>
+  <h2>Smyčka 6</h2>
+  <div id ="ovlivneny6">
+
+  </div>
   <h2>Úkoly</h2>
   <ul>
     <li>Vytvoř smyčku, která začne na 40</li>
-    <li> Vytvoř smyčku, která půjde sesetupně k 20</li>
+    <li>Vytvoř smyčku, která půjde sesetupně k 20</li>
     <li>Vytvoř smyčku, která půjde po 3 paragrafech</li>
   </ul>
   <h1>Odkazy</h1>
@@ -44,23 +56,45 @@
   var text1 = "";
   var text2 = "";
   var text3 = "";
-  alert("ahoj");
+  var text4 ="";
+  var text5="";
+  var text6="";
+  var ukol=50;
+  var ukol2=15;
+
+  //alert("ahoj");
   while (nyni < opakovani) {
     text1 +=  "<p>" + nyni + ". paragraf</p>";
     nyni = nyni + krok; //nyni = nyni +1;  -> nyni += 1; -> nyni++;
   }
-  for (var i = 0; i < opakovani; i++) {
+  for (var i = 0; i < opakovani; i++) { // i= i +1;
       text2 +=  "<p>" + i + ". paragraf</p>";
   }
+
   for (var i = 1; i < opakovani; i = i + 2) {
     text3 = text3 + "<p> překážecí paragraf </p>";
-      text3 +=  "<p>" + (i+1) + ". paragraf</p>";
+    text3 +=  "<p>" + i + ". paragraf</p>";
+  }
+
+  for (var i = 40; i < ukol; i++) { // i = i +1;
+    text4 = text4 + "<p>Ahooj</p> ";
+    //text += "<p>Ahooj</p> ";
+    console.log(i);
+  }
+
+  for (var i = 40; i > opakovani; i = i-1) { //i--;
+    text5 += "<p>nazdaar</p>" + i;
+  }
+  for (var i = 1; i < ukol2; i=i+3) {
+    text6 += "<p>" + i + "nojooooo</p>";
   }
   document.getElementById("ovlivneny1").innerHTML = text1;
   document.getElementById("ovlivneny2").innerHTML = text2;
   document.getElementById("ovlivneny3").innerHTML = text3;
+  document.getElementById("ovlivneny4").innerHTML = text4;
+  document.getElementById("ovlivneny5").innerHTML = text5;
+  document.getElementById("ovlivneny6").innerHTML = text6;
 
   </script>
-
   </body>
 </html>
