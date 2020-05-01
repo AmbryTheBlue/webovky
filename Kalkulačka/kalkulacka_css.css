@@ -15,6 +15,7 @@ h2{
   margin:0;
   font-weight: bold;
   font-stretch: expanded;
+  width: 1450px;
 }
 
 .zahlavi{
@@ -22,12 +23,22 @@ background-color: #581845;
 }
 .menu{
   background-color: #FF5733;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: justify;
 }
-div.menu1{
-  background-color: #FF5733;
+.menu1{
+  display: none;
+  position: absolute;
 }
 .menu2{
-  display: none;
+  background-color: #FF5733;
+  margin:0;
+  display: block;
+  min-height: 50px;
+  min-width: 120px;
+  text-align: center;
 }
-
-div.menu1:hover+.menu2{display: block;}
+.menu2:hover{background-color: grey}
+.menu:hover .menu1{display: block;}
