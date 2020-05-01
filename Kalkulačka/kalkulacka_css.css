@@ -1,0 +1,33 @@
+body{
+  background: #FFC300;
+  margin: 0 0 0 0;
+}
+h1{
+  margin: 0;
+  text-align: center;
+  text-shadow: 0px 1px 5px #808080;
+  color:white;
+  font-size: 300%;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+h2{
+  margin:0;
+  font-weight: bold;
+  font-stretch: expanded;
+}
+
+.zahlavi{
+background-color: #581845;
+}
+.menu{
+  background-color: #FF5733;
+}
+div.menu1{
+  background-color: #FF5733;
+}
+.menu2{
+  display: none;
+}
+
+div.menu1:hover+.menu2{display: block;}
