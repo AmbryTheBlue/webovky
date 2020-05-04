@@ -7,6 +7,10 @@
   </head>
   <body>
   <h1>Změna a odstranění prvků z určité části pole</h1>
+  <h2>delete</h2>
+  Odstraní prvek, ale zachová indexování. Smazaný index je pouze nedefinován.
+  <h2>splice</h2>
+  Nezanechává "mezery v poli". Bacha exsituje i metoda slice, ta ale dělá něco jiného.
 
 
   <h1>Odkazy</h1>
@@ -21,17 +25,21 @@
   </ul>
 
   <script>
-    var vstupy = ["A", "B", "C", "A", "B", "C", "A", "B", "C"];
-    var delky = [120,58,42,65,35,22,78,11,36];
-    var vystupy = ["B", "B" , "C", "C", "A", "B", "A", "A", "B"];
-    var a = 69;
-    var b = 136;
-    for (var i = 0; i < vstupy.length; i++) {
-      console.log(vstupy[i] + " " + vystupy[i]);
-      if (vstupy[i] == vystupy[i]){
-        console.log("Pravda");
-      }
-    }
+    var pole = ["a", "b", "c", "d", "e", "f", "g", "h"];
+    pole[pole.length] = "i"; //Přidá na konec Pole
+    console.log(pole.toString());
+
+    //delete
+    delete pole[2]; //indexy s neposunou, změní hodnotu tohoto indexu na undefined
+    console.log(pole.toString());
+    console.log(pole[2]);
+
+    //splice
+    pole.splice(1,3); //začne na druhé (1.) pozici a odebere 3 prvky
+    console.log(pole.toString());
+    //Ve skutečnosti se dá plně použí na nahrazení prvků, akorát my jsme ten argument vynechali, takže bylo nahrazeno prázdnotou.
+    pole.splice(2, 3, "x", "y", "z");
+    console.log(pole.toString());
   </script>
 
   </body>
