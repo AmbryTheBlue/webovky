@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styl.css">
+    <title>Pole!! </title>
+
+  </head>
+  <body>
+    <h1>Pole</h1>
+    <ul>
+      <li>Používá se, když si chci uložit více věcí a nechci pokaždé vytvářet novou proměnnou</li>
+      <li>Základní pro strukturalizaci dat</li>
+    </ul>
+    <h2>Vzor 1</h2>
+    <h3>pole</h3>
+    <p>Lidi: <span id ="ex1_lidi"></span></p>
+    <p>Věky: <span id ="ex1_veky"></span></p>
+    <h3>Úlohy</h3>
+    <p>Věk prvního člověka: <span id ="ex1_1vek"></span></p>
+    <p>Jméno třetího člověka: <span id ="ex1_3jmeno"></span></p>
+    <p>Věk nejstaršího člověka: <span id="ex1_nejsarsi"></span></p>
+
+  <h2>Vzor 2 přidávání a odebírání prvků pole</h2>
+    <p>Asi to budu vypisovat do konzole, to je snažší</p>
+    <h4>Srandy se stringy</h4>
+    <p id="ex2a"></p>
+    <p id="ex2b"></p>
+  <h2>Úkoly</h2>
+  <ol>
+    <li>Vytvoř si vlastní pole a v něm: <ol>
+      <li>Přidej prvek na začátek</li>
+      <li>Odeber poslední prvek</li>
+      <li>Hodnotu posledního prvku ulož do 2. pozice</li>
+
+    </ol> </li>
+    <li> <a href="s6p2.html">na další straně</a> procházení pole </li>
+  </ol>
+
+  <h1>Odkazy</h1>
+  <ul>
+    <li><a href="../main.html">hlavní stránka</a></li>
+    <li><a href="s6p2.html">Další část</a></li>
+  </ul>
+  <h3>Další zdroje</h3>
+  <ul>
+    <li> <a href="https://www.w3schools.com/js/js_array_methods.asp">Aby se neřeklo</a></li>
+  </ul>
+
+  <script>
+    //example1
+    var lidi = ["Jan", "Jakub", "Jonáš", "Ježíš", "Jidáš"];
+    var veky = [10, 19, 20, 2000, 150];
+    document.getElementById("ex1_lidi").innerHTML = lidi.toString();
+    document.getElementById("ex1_veky").innerHTML = veky.toString();
+    document.getElementById("ex1_1vek").innerHTML = veky[0];
+    document.getElementById("ex1_3jmeno").innerHTML = lidi[2];
+    var nejstarsi = 0; //10
+    for (var i = 0; i < veky.length; i++) {
+      if (veky[i]>nejstarsi) {
+        nejstarsi = veky[i];
+      }
+    }
+
+    document.getElementById("ex1_nejsarsi").innerHTML = nejstarsi;
+    //example2
+    var skupiny = ["Strunatci", "Houby", "Ryby", "Plazi", "Bakterie", "Žahavci"];
+    var pocty = [10, 150, 40, 30, 2000, 3];
+    console.log("Skupiny: " + skupiny.toString());
+    console.log("Počty: " + pocty.toString());
+
+    //odebírání prvků
+    var odber1 = skupiny.pop(); //odebere poslední prvek
+    var odber2 = pocty.shift(); //odebere první prvek
+    // do proměnné se uloží co je smazáno, ale není třeba to psát
+    console.log("Skupiny: " + skupiny.toString());
+    console.log("Počty: " + pocty.toString());
+    console.log("Odebraný prvek ze skupin: " + odber1);
+    console.log("Odebraný prvek z počtů: " + odber2);
+    skupiny.pop(); //Taky funguje, shift obdobně
+
+    //Přidávání prvků
+    var pridano1 = skupiny.push("Žáby"); //na konec, vrací index kam se to uložilo
+    var pridano2 = pocty.unshift(69); //na i=0, funkce vrací délku pole
+    console.log("Skupiny: " + skupiny.toString());
+    console.log("Počty: " + pocty.toString());
+    console.log("Přidaný prvek (žáby) do skupin je na indexu: " + pridano1);
+    console.log("Délka pole (po přídání 69 na začátek): " + pridano2);
+    skupiny.unshift("Ostnokožci"); // není třeba si to co funkce vrací někam ukládat, obodobně u push
+
+
+    //Změna hodnoty prvku Pole
+    skupiny[0] = "Lidoopi";
+    pocty[3] = 42;
+    console.log("Skupiny: " + skupiny.toString());
+    console.log("Počty: " + pocty.toString());
+
+    //Další způsob procházení pole:
+    var a;
+    var soucet = 0;
+    for (a of pocty){
+      soucet = soucet + a;
+    }
+    console.log("Součet všech počtů: " + soucet);
+
+    //Textový řetězec je vlastně taky pole
+    var retezec1 = skupiny[3]; //"Houby"
+    var retezec2 = skupiny[2];
+    var text1 = "";
+    var text2 = "";
+    var b;
+    for (b of retezec1){
+      text1 = text1 + b + "<br>"
+    }
+    for (var i = 0; i < retezec2.length; i++) {
+      text2 = text2 + retezec2[i] + "<br>"
+    }
+    document.getElementById("ex2a").innerHTML = text1;
+    document.getElementById("ex2b").innerHTML = text2;
+
+    var pole=["haha","hehe","hihi","huhu","hoho"];
+    pole.unshift("hyhy");
+    console.log(pole);
+    pole.pop();
+    console.log(pole);
+    pole[1] = pole[pole.length-1];
+    console.log(pole);
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="styl.css">
+    <title>ÚKOLY - Pole</title>
+  </head>
+  <body>
+  <h1>Úkoly</h1>
+  Jsou 3 pole. Vstupní konektory trubek, výstupní konektory trubek. A každá trubka má určitou délku.
+  <ol>
+    <li>Zjisit jestli exsituje trubka delší než $a$</li>
+    <li>Zjistit jestli existuje trubka s vstupní konektorem "B", která je kratší než 40</li>
+    <li>Potřebujeme spojit 2 trubky (neber v potaz konektory, stavební firma má potřebné korekce), zjisti: <ol>
+      <li>Nejktratší kombinaci trubek</li>
+      <li>Nejdelší kombinaci trubek</li>
+      <li>Exsistuje-li kombinace o délce $b$</li>
+    </ol> </li>
+    <li>Zlatý hřeb: Nedjelší kombinace 2 trubek, které jdou spojit - tj. mají odpovídadící vstupní a výstupní konektory</li>
+
+  </ol>
+  <h1>Odkazy</h1>
+  <ul>
+    <li><a href="s6p1.html">Předchozí část</a></li>
+    <li><a href="../main.html">hlavní stránka</a></li>
+    <li><a href="s6p3.html">Další část</a></li>
+  </ul>
+  <h3>Další zdroje</h3>
+  <ul>
+    <li> </li>
+  </ul>
+
+  <script>
+    var vstupy = ["A", "B", "C", "A", "B", "C", "A", "B", "C"];
+    var delky = [120,58,42,65,35,22,78,11,36];
+    var vystupy = ["B", "B" , "C", "C", "A", "B", "A", "A", "B"];
+    var a = 69;
+    var b = 136;
+    for (var i = 0; i < vstupy.length; i++) {
+      console.log(vstupy[i] + " " + vystupy[i]);
+      if (vstupy[i] == vystupy[i]){
+        console.log("Pravda");
+      }
+    }
+    var reseni1=false;
+    for (var i = 0; i < delky.length; i++) {
+      if(delky[i] > a ){
+        reseni1=true;
+      }
+    }
+    console.log(reseni1);
+
+    var reseni2=false;
+    for (var i = 0; i < vstupy.length; i++) {
+      if (vstupy[i]=="B"&&delky[i]<40) {
+        reseni2=true;
+      }
+    }
+  console.log(reseni2);
+
+  </script>
+
+  </body>
+</html>

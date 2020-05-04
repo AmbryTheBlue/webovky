@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="styl.css">
+    <title>Pole - rozšíření</title>
+  </head>
+  <body>
+  <h1>Změna a odstranění prvků z určité části pole</h1>
+  <h2>delete</h2>
+  Odstraní prvek, ale zachová indexování. Smazaný index je pouze nedefinován.
+  <h2>splice</h2>
+  Nezanechává "mezery v poli". Bacha exsituje i metoda slice, ta ale dělá něco jiného.
+
+
+  <h1>Odkazy</h1>
+  <ul>
+    <li><a href="s6p2.html">Předchozí část</a></li>
+    <li><a href="../main.html">hlavní stránka</a></li>
+    <li><a href="s6p4.html">Další část</a> Neexistuje</li>
+  </ul>
+  <h3>Další zdroje</h3>
+  <ul>
+    <li> </li>
+  </ul>
+
+  <script>
+    var pole = ["a", "b", "c", "d", "e", "f", "g", "h"];
+    pole[pole.length] = "i"; //Přidá na konec Pole
+    console.log(pole.toString());
+
+    //delete
+    delete pole[2]; //indexy s neposunou, změní hodnotu tohoto indexu na undefined
+    console.log(pole.toString());
+    console.log(pole[2]);
+
+    //splice
+    pole.splice(1,3); //začne na druhé (1.) pozici a odebere 3 prvky
+    console.log(pole.toString());
+    //Ve skutečnosti se dá plně použí na nahrazení prvků, akorát my jsme ten argument vynechali, takže bylo nahrazeno prázdnotou.
+    pole.splice(2, 3, "x", "y", "z");
+    console.log(pole.toString());
+  </script>
+
+  </body>
+</html>
