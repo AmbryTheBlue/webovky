@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="styl.css">
+    <title>Vzor dvojitého cyklu</title>
+  </head>
+  <body>
+    <h1>Vzor dvojitého cyklu</h1>
+  <h2>Příklad</h2>
+  Máme pole věků dívek a pole věků chlapců. Najdi dvojici, jejichž věky by byly stejné. (nebo součet věků menší než x)
+  <ol>
+    <li>Uvažuj pouze hetero</li>
+    <li>Uvažuj pouze homo</li>
+  </ol>
+  <h1>Úkoly</h1>
+  <ul>
+    <li>Zkus si pro homo děvčata, jejichž souhrný věk je menší než 32</li>
+  </ul>
+  <h1>Odkazy</h1>
+  <ul>
+    <li><a href="s6p1.html">Předchozí část</a></li>
+    <li><a href="../main.html">hlavní stránka</a></li>
+    <li><a href="s6p3.html">Další část</a></li>
+  </ul>
+  <h3>Další zdroje</h3>
+  <ul>
+    <li> </li>
+  </ul>
+
+  <script>
+    var chlapci = [15,17,18,12,20,19,18];
+    var devcata = [14,21,18,19,23,17,18];
+
+    //hetero dvojice stejného věku
+    console.log("Hetero dvojice stejného věku");
+    for (var i = 0; i < chlapci.length; i++) {
+      for (var j = 0; j < devcata.length; j++) {
+        if(chlapci[i]==devcata[j]){
+          console.log("chalpci[" + i +"] a devcata[" + j +"]");
+          console.log(chlapci[i] + "==" + devcata[j]);
+
+        }
+      }
+    }
+
+  //homo Dvojice s věkem menším než $a$
+  var a = 30;
+  console.log("Chlpaci homo dvojice, se společným věkem menším než " + a);
+   for (var i = 0; i < chlapci.length; i++) {
+     for (var j = 0; j < chlapci.length; j++) {
+       if(i != j){
+         if(chlapci[i]+chlapci[j]<30)
+         console.log("Chlapec " + i + " a chlapec " + j);
+       }
+     }
+   }
+
+  </script>
+
+  </body>
+</html>
