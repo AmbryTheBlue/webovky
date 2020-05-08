@@ -15,31 +15,38 @@
 </div>
 
 <div class="buttons">
-  <p id="test">Hehe</p>
-  <p id="prd">haha</p>
-    <button type="button" name="button" class="button">1</button>
-    <button type="button" name="button" class="button">2</button>
-    <button type="button" name="button" class="button">3</button>
-    <button type="button" name="button" class="button">DEL</button>
-    <button type="button" name="button" class="button">AC</button>
-    <button type="button" name="button" class="button">4</button>
-    <button type="button" name="button" class="button">5</button>
-    <button type="button" name="button" class="button">6</button>
-    <button type="button" name="button" class="button">*</button>
-    <button type="button" name="button" class="button">÷</button>
-    <button type="button" name="button" class="button">7</button>
-    <button type="button" name="button" class="button">8</button>
-    <button type="button" name="button" class="button">9</button>
-    <button type="button" name="button" class="button">+</button>
-    <button type="button" name="button" class="button">-</button>
-    <button type="button" name="button"class="button">0</button>
-    <button type="button" name="button" class="button">(</button>
-    <button type="button" name="button" class="button">)</button>
-    <button type="button" name="button" class="button">.</button>
-    <button type="button" name="button" class="button">=</button>
-
+  <p id="Zapis">Hehe</p>
+  <p id="vysledek">haha</p>
+    <button type="button" name="button" class="button" onclick="pridejCislo(1)">1</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(2)">2</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(3)">3</button>
+    <button type="button" name="button" class="button" onclick="vymazPredchozi()">DEL</button>
+    <button type="button" name="button" class="button" onclick="vymazCele()">AC</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(4)">4</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(5)">5</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(6)">6</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('*')">*</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('/')">÷</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(7)">7</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(8)">8</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(9)">9</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('+')">+</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('-')">-</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(0)">0</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('(')">(</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak(')')">)</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('.')">.</button>
+    <button type="button" name="button" class="button" onclick="vypocitej()">=</button>
 </div>
-
+<script type="text/javascript">
+ console.log("Stránka načtena");
+ var policko = [];
+ console.log(policko.lenght);
+ if (typeof policko.lenght == "undefined") {
+   console.log("Policko má délku 0?");
+ }
+ zobraz();
+</script>
 </body>
 
 

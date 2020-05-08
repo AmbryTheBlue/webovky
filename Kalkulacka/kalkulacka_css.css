@@ -56,10 +56,10 @@ background-color: #581845;
   margin-right: auto ;
   margin-top: 5%;
 }
-#test {
+#Zapis {
   grid-area: 1 / 1 / 1 / 6;
 }
-#prd{
+#vysledek{
   grid-area: 2 / 1 / 2 / 6;
   text-align: right;
 }
