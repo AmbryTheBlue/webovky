@@ -58,6 +58,35 @@
     }
   console.log(reseni2);
 
+var w=1000;
+var prvni = 0;
+var druha = 0;
+console.log("kombinace nejkratších trubek");
+for (var i = 0; i < delky.length; i++) {
+  for (var j = 0; j < delky.length; j++) {
+if (delky[i]+delky[j]<w) {
+  w=delky[i]+delky[j];
+  prvni = i;
+  druha = j;
+  }
+  }
+}
+  console.log("nejratší trubka "+prvni+" druhá nejkratší trubka "+druha + "Celková délka " + w);
+
+var nejdelsi=0;
+var text = "";
+for (var i = 0; i < delky.length; i++) {
+  for (var j = 0; j < delky.length; j++) {
+  if (delky[i]+delky[j]>nejdelsi) {
+  if (vstupy[i]==vystupy[j]) {
+    nejdelsi=delky[i]+delky[j];
+    text = "Trubka" + i + ": " + vstupy[i] + "("+ vystupy[i] + ") delka= " + delky[i]+ "\n Trubka" + j + ": " + vystupy[j] + "("+ vystupy[j] + ") delka" + delky[j] + "\n celková delka = " + nejdelsi;
+  }
+  }
+  }
+}
+console.log(text);
+
   </script>
 
   </body>

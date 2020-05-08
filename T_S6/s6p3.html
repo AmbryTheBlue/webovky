@@ -8,11 +8,18 @@
   <body>
   <h1>Změna a odstranění prvků z určité části pole</h1>
   <h2>delete</h2>
-  Odstraní prvek, ale zachová indexování. Smazaný index je pouze nedefinován.
+  <p>Odstraní prvek, ale zachová indexování. Smazaný index je pouze nedefinován.</p>
   <h2>splice</h2>
-  Nezanechává "mezery v poli". Bacha exsituje i metoda slice, ta ale dělá něco jiného.
+  <p>Nezanechává "mezery v poli". Bacha exsituje i metoda slice, ta ale dělá něco jiného.</p>
+  <p>schopnosti této metody jsou ale komplexnější. viz JS kód</p>
 
-
+  <h1>Úkoly</h1>
+  <ol>
+    <li>Odeber 3.prvek z pole, tak aby v poli nebyla mezera</li>
+    <li>nahraď 4. prkvek písmenem "q"</li>
+    <li>přidej prvek na konec pole "p" </li>
+    <li>nahraď 5.-7. prvek</li>
+  </ol>
   <h1>Odkazy</h1>
   <ul>
     <li><a href="s6p2.html">Předchozí část</a></li>
@@ -37,9 +44,24 @@
     //splice
     pole.splice(1,3); //začne na druhé (1.) pozici a odebere 3 prvky
     console.log(pole.toString());
-    //Ve skutečnosti se dá plně použí na nahrazení prvků, akorát my jsme ten argument vynechali, takže bylo nahrazeno prázdnotou.
+    //Ve skutečnosti se dá plně použí na nahrazení prvků, akorát my jsme ten argument vynechali, takže bylo nahrazeno prázdnotou, asi ??
     pole.splice(2, 3, "x", "y", "z");
     console.log(pole.toString());
+
+    var pole2 = ["a", "b", "c", "d", "e", "f", "g", "h"];
+    pole2.splice(3,1);
+    console.log(pole2.toString());
+
+    pole2.splice(4,1, "q");
+    //pole2[4] = "q";
+  console.log(pole2.toString());
+
+  pole2.push("p");
+  //pole2[pole2.length] = "p";
+  console.log(pole2.toString());
+
+  pole2.splice(5,2, "nojo", "takjo");
+  console.log(pole2.toString());
   </script>
 
   </body>
