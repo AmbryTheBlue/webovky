@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>Funkce!!!</title>
+    <script src="funkce.js">
+    </script>
+  </head>
+  <body>
+    <h1>Funkce</h1>
+    <ul>
+      <li>Část kódu, která se provede, když je funkce zavolána. Ten kód musí být již předtím v tzv. definici funkce </li>
+      <li>Může mít nějaké parametry oddělené čárkou</li>
+      <li>Z funkce můžeme volat další funkce (můžeme volat dokonce i funkce samotnou = rekurze)</li>
+      <li>Funkce může vracet nějakou hodnotu. Viz <a href="s7p2.html">druhá část</a></li>
+    </ul>
+    <h2>Zobrazeni</h2>
+    <p>a = <span id="a_span"></span></p>
+    <p>Zprava: <span id="message"></span></p>
+    <h2>Tlačítka</h2>
+    <button type="button" onclick="pricti1()">Přičti 1</button> <br>
+    <button type="button" onclick="pricti2()"> Přičti 2</button> <br>
+    <button type="button" onclick="odecti()"> Odečti</button> <br>
+    <button type="button" onclick="prictix(12)"> Přičti $x$</button> <br>
+    <button type="button" onclick="druha_mocnina()" name="button">Druhá mocnina</button> <br>
+    <button type="button" name="button" onclick="ukol2a(9)">nasobeni 9</button> <br>
+    <button type="button" name="button" onclick="ukol2b(3)">delění 3</button> <br>
+    <button type="button" name="button" onclick="ukol3('nasobeni',6)"> Násobení 6</button> <br>
+    <button type="button" name="button" onclick="ukol3('deleni',6)"> Dělení 6</button> <br>
+  <h2>Úkoly</h2>
+  <ol>
+    <li>Vytvoř další tlačíko na druhou mocninu</li>
+    <li>Vytvoř tlačítko pro násobení/dělení, které bude mít činitele/dělitele určeného paramtrem</li>
+    <li>Vytvoř funkci jejíž první parametr určí jestli to má být dělení/násobení (nebo sčítání/odečítání) a druhý parametr je číslo, kterým je operace prováděna</li>
+  </ol>
+  <h1>Odkazy</h1>
+  <ul>
+    <li><a href="../main.html">hlavní stránka</a></li>
+    <li><a href="s7p2.html">Další část</a></li>
+  </ul>
+  <h3>Další zdroje</h3>
+  <ul>
+  <li> <a href="https://www.w3schools.com/js/js_functions.asp">Příklady funkcí</a> z w3schools </li>
+  </ul>
+
+  <script type="text/javascript">
+    zobraz("Stránka načtena");
+  </script>
+
+  </body>
+</html>
