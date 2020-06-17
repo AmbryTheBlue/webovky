@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="kalkulacka_css.css">
+  <script src="kalkulacka_javascript.js">
+  </script>
+</head>
+<body>
+  <div class="zahlavi"><h1>Kalkulačka</h1></div>
+<div class="menu"><h2>Odkaz na další části</h2>
+  <div class="menu1">
+  <p class="menu2"> <a href="#">Budoucí projekty, budeš čumět</a></p>
+  </div>
+</div>
+
+<div class="buttons">
+  <p id="Zapis">Hehe</p>
+  <p id="vysledek">haha</p>
+    <button type="button" name="button" class="button" onclick="pridejCislo(1)">1</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(2)">2</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(3)">3</button>
+    <button type="button" name="button" class="button" onclick="vymazPredchozi()">DEL</button>
+    <button type="button" name="button" class="button" onclick="vymazCele()">AC</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(4)">4</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(5)">5</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(6)">6</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('*')">*</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('/')">÷</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(7)">7</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(8)">8</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(9)">9</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('+')">+</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('-')">-</button>
+    <button type="button" name="button" class="button" onclick="pridejCislo(0)">0</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('(')">(</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak(')')">)</button>
+    <button type="button" name="button" class="button" onclick="pridejZnak('.')">.</button>
+    <button type="button" name="button" class="button" onclick="vypocitej()">=</button>
+</div>
+<script type="text/javascript">
+ console.log("Stránka načtena");
+ var policko = [];
+ console.log(policko.lenght);
+ if (typeof policko.lenght == "undefined") {
+   console.log("Policko má délku 0?");
+ }
+ zobraz();
+</script>
+</body>
+
+
+
+</html>

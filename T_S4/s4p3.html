@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="s4.css">
+    <title>JavaScript 3</title>
+
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <h2>true/false</h2>
+    <ul>
+      <li>Pravda a nepravda jsou pravdivostní hodnoty</li>
+      <li>Jdou s nimi provádět logické operace jako 'a' a 'nebo'</li>
+      <li>Můžeme je získat z jiných proměnných pomocí takzvaných porovnácacích operátorů</li>
+    </ul>
+    <h2>'if', 'else if' a 'else'</h2>
+    <ul>
+      <li>if je jednoduché pokud platí (tj. je pravdivý) výraz v závorce, tak prověď kód v složených závorkách</li>
+      <li>Dá se kombinovat s else, které se provede pokud není podmínka splněna</li>
+      <li>'else if', které provede kód ve složených závrokách, pokud předchozí podmínka neplatí a pokud platí podmínka v kulatých závorkách</li>
+    </ul>
+    <h2>Výstupy</h2>
+    <h4>Jednoduché podmínky</h4>
+    <p id="vlozeny">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny1">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny2">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny3">Sem se vloží něco pomocí javascriptu</p>
+    <h4>Logické operátory</h4>
+    <p id="vlozeny4">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny5">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny6">Ani jeden nebyl pravda</p>
+    <h4>else if</h4>
+    <p id="vlozeny7">Sem se vloží něco pomocí javascriptu</p>
+
+
+  <h2>Úkoly</h2>
+    <ul>
+      <li>Urči pro jaká $a$ nastane větev else</li>
+      <li>Pro 2 čísla x,y vytovř podmínky, tak aby dokázali určit:<ul>
+        <li>Jsou-li si čísla rovna: <span id="rovnost"></span> </li>
+        <li>Jsou-li si absolutní hodnoty těchto čísel rovny: <span id="absultuni"></span> </li>
+        <li>Je-li alespoň jedno číslo rovno 12: <span id="dvanact"></span> </li>
+        <li>Alespoň jedno číslo menší než nula: <span id="jedno_zaporne"></span> </li>
+        <li>Právě jedno číslo je menší než nula <span id ="prave_jedno_zaporne"></span> </li>
+        <li>Právě jedno číslo je menší než nula <span id ="prave_jedno_zaporne2"></span> </li>
+        <li>Právě jedno číslo je menší než nula <span id ="prave_jedno_zaporne3"></span> </li>
+      </ul></li>
+  </ul>
+  <p id ="ukol2"></p>
+
+
+  <h1>Odkazy</h1>
+  <a href="s4p1.html">Předchozí část</a> <br>
+  <a href="../main.html">hlavní stránka</a> <br>
+  <a href="s4p4.html">Další část - neexistuje</a>
+  <h3>Další zdroje</h3>
+  <ul>
+  <li> <a href="https://www.w3schools.com/js/js_if_else.asp">if else syntax</a></li>
+  <li> <a href="https://www.w3schools.com/js/js_booleans.asp">Boolean a tak</a> </li>
+  </ul>
+
+  <script >
+    var t1 = true;
+    var t2 = true;
+    var f1 = false;
+    var f2 = false;
+    // Jednoduche pomdinky
+    if (t1) {
+    document.getElementById("vlozeny").innerHTML = "t1 je pravda";
+    }
+    if(t2){
+    document.getElementById("vlozeny1").innerHTML = "t2 je pravda";
+    }
+    if(f1){
+    document.getElementById("vlozeny2").innerHTML = "f1 je pravda";
+    }
+    //Podminka neslpněna provede se else
+    if(f2){
+    document.getElementById("vlozeny3").innerHTML = "f1 je pravda";
+    }
+    else{
+      document.getElementById("vlozeny3").innerHTML = "f1 je nepravda";
+    }
+
+    //logické operátory
+    // Logické A
+    if(t1 && t2){
+      document.getElementById("vlozeny4").innerHTML = "t1 i t2 jsou pravda";
+    }
+    else{
+      document.getElementById("vlozeny4").innerHTML = "Alespoň jeden je nepravda";
+    }
+    //logické nebo
+    if(t1||f1){
+      document.getElementById("vlozeny5").innerHTML = "Alespoň jeden je pravda";
+      //Funkce se mouhou skladat do vice urovni
+      if(t1){
+        document.getElementById("vlozeny6").innerHTML = "t1 je pravda";
+      }
+      else{
+        document.getElementById("vlozeny6").innerHTML = "t1 je nepravda";
+      }
+    }
+    else {
+      document.getElementById("vlozeny5").innerHTML = "Ani jeden není pravda";
+    }
+    //porovnávací operátory
+    var a = 52;
+    if (a>100){
+      document.getElementById("vlozeny7").innerHTML = "Číslo a je veliké";
+    }
+    else if(a<0){
+      document.getElementById("vlozeny7").innerHTML = "Číslo a je záporné";
+    }
+    else if (a<25){
+      document.getElementById("vlozeny7").innerHTML = "Číslo a je malé";
+    }
+    else if(a==52){
+      document.getElementById("vlozeny7").innerHTML = "Číslo a je rovno 52";
+    }
+    else{
+      document.getElementById("vlozeny7").innerHTML = "Číslo a je jaké?";
+    }
+    var x = 12;
+    var y = "haf";
+    if(x>10 && y=="haf"){
+      document.getElementById("ukol2").innerHTML = "Obě čísla jsou větší než 10";
+    }
+    else {
+      document.getElementById("vlozeny7").innerHTML = "Baf";
+    }
+
+    var q = 2;
+    var p = 12;
+    if (q==p) {document.getElementById("rovnost").innerHTML = "rovnají se";
+  }
+  else {
+    document.getElementById("rovnost").innerHTML = "nerovnají se";
+  }
+  if (q==p) {document.getElementById("absultuni").innerHTML = "rovnají se";
+
+    }
+    else if (-q==p) {document.getElementById("absultuni").innerHTML = "rovnají se";
+  }
+    else {
+      document.getElementById("absultuni").innerHTML = "nerovnají se";
+    }
+    if (p==12||q==12) {document.getElementById("dvanact").innerHTML = " alepoň jeden se rovná 12";
+    }
+    else {
+      document.getElementById("dvanact").innerHTML = "ani jeden se nerovná 12";
+    }
+if (p<0||q<0) {document.getElementById("jedno_zaporne").innerHTML = "alespon jeden je menší než nula";
+
+}
+else {
+  document.getElementById("jedno_zaporne").innerHTML = "ani jeden není menší než nula";
+}
+
+if (p<0&&q>=0) {document.getElementById("prave_jedno_zaporne").innerHTML = "právě jedno je záporné";
+  }
+else if (p>=0&&q<0) {document.getElementById("prave_jedno_zaporne").innerHTML = "právě jedno je záporné";
+  }
+else {
+  document.getElementById("prave_jedno_zaporne").innerHTML = "není pravda";
+}
+
+if (p<0) {
+  if (q>=0) {
+    document.getElementById("prave_jedno_zaporne2").innerHTML = "Právě jedno je záporné";
+  }
+  else {
+    document.getElementById("prave_jedno_zaporne2").innerHTML = "Není pravda";
+  }
+}
+else {
+  if (q<0) {
+    document.getElementById("prave_jedno_zaporne2").innerHTML = "Právě jedno je záporné";
+  }
+  else {
+    document.getElementById("prave_jedno_zaporne2").innerHTML = "Není pravda";
+  }
+}
+
+if( (p<=0 && q>0) || (p>0 && q<=0)){
+  document.getElementById("prave_jedno_zaporne2").innerHTML = "Právě jedno je záporné";
+}
+else{
+  document.getElementById("prave_jedno_zaporne2").innerHTML = "Není pravda";
+}
+
+if( (p<0 || q<0) && (p>=0 || q>=0) ){
+  document.getElementById("prave_jedno_zaporne3").innerHTML = "Právě jedno je záporné";
+}
+else{
+  document.getElementById("prave_jedno_zaporne3").innerHTML = "Není pravda";
+}
+
+  </script>
+  </body>
+</html>

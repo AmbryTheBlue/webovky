@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="s4.css">
+    <title>JavaScript 2</title>
+
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <h2>Proměnné a základní operátory</h2>
+    <ul>
+      <li>Proměnné různého typu: celé číslo, text, desetinné číslo, Boolean (pravda, nepravda) a další</li>
+      <li>Sčítání, odčítání, násobení, dělení</li>
+    </ul>
+
+    <h2>Vložení textu do stránky</h2>
+    <h4>Čísla</h4>
+    <p id="vlozeny">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny1">Sem se vloží něco pomocí javascriptu</p>
+    <h4>Texty</h4>
+    <p id="vlozeny2">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny3">Sem se vloží něco pomocí javascriptu</p>
+    <h4>Číslo a text</h4>
+    <p id="vlozeny4">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny5">Sem se vloží něco pomocí javascriptu</p>
+    <h4>Následuje magie</h4>
+    <p id="vlozeny6">Sem se vloží něco pomocí javascriptu</p>
+    <p id="vlozeny7">Sem se vloží něco pomocí javascriptu</p>
+
+
+  <h2>Úkoly</h2>
+  <ul>
+<li>Vyzkoušej různé operátory na různé proměnné</li>
+<li>Vytvoř proměnou $a$, zobraz polovinu její třetí mocniny jako následující prvek seznamu</li>
+<li></li> <!-- Tady prosím-->
+  </ul>
+  <h1>Odkazy</h1>
+  <a href="s4p1.html">Předchozí část</a> <br>
+  <a href="../main.html">hlavní stránka</a> <br>
+  <a href="s4p3.html">Další část</a>
+  <h3>Další zdroje</h3>
+  <ul>
+  <li> <a href="https://www.w3schools.com/js/js_operators.asp">Seznam operátorů</a></li>
+  </ul>
+
+
+  <!-- Pokud nezvyraznuje atom, zkus pridat paramter type="text/javascript" -->
+  <script>
+    //Takhle se pisi komentare
+    var x; //deklarace promenne
+    x = 2; // Prirazeni hodnoty promenne
+    var y = 3; // na jedne radce
+    var z = x + y; //zde si vyzkousej ruzne operatory
+    document.getElementById("vlozeny").innerHTML = z;
+    //zmena hodnoty bez problemu
+    x = 30/x;
+    x = (0.5 * x - 3)*2;
+    document.getElementById("vlozeny1").innerHTML = x;
+
+    var text = "Ahoj";
+    var text2 = "Nazdar";
+    document.getElementById("vlozeny2").innerHTML = text + text2;
+    document.getElementById("vlozeny3").innerHTML = text2 + text;
+
+    //co cislo a text
+    var cislo = "222";
+    document.getElementById("vlozeny4").innerHTML = text + cislo;
+    document.getElementById("vlozeny5").innerHTML = text + z;
+
+    //A ted magie
+    var soucet1 = 0;
+    soucet1 = z + cislo;
+    var soucet2 = cislo * z;
+    document.getElementById("vlozeny6").innerHTML = soucet1;
+    document.getElementById("vlozeny7").innerHTML = soucet2;
+  </script>
+  </body>
+</html>
