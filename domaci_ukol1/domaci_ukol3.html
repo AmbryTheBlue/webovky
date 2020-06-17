@@ -1,0 +1,163 @@
+<html>
+<head>
+  <title>Domácí úkol 3</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="domaci_ukol.css">
+  <script>
+  function test(){
+    alert("test");
+    console.log("Velky test!");
+  }
+  function funkce(){
+    var a = Number(document.getElementById("myText_a").value);
+    var b = Number(document.getElementById("myText_b").value);
+    var c = Number(document.getElementById("myText_c").value);
+    //y = a*(x**2) + b*x + c;
+
+    var d = b**2 - 4*a*c;
+    document.getElementById("diskriminant1").innerHTML=d;
+
+
+if (d>0) {
+  document.getElementById("Diskriminant").innerHTML="Ano";
+  document.getElementById("rkoren1").innerHTML=(-b+ Math.sqrt(d))/(2*a);
+  document.getElementById("rkoren2").innerHTML=(-b - Math.sqrt(d))/(2*a);
+}
+else if(d==0){
+document.getElementById("Diskriminant").innerHTML="Ano";
+}
+else {
+  var realna = -b/(2*a);
+  var imaginarni = (Math.abs(d)**0.5)/(2*a);
+  var i= "i";
+  realna = realna.toString();
+  var imaginarni1 = "+ " + imaginarni;
+  var imaginarni2 = "- " + imaginarni;
+  document.getElementById("Diskriminant").innerHTML="Ne";
+  document.getElementById("ikoren1").innerHTML=realna+imaginarni1+i;
+  document.getElementById("ikoren2").innerHTML= realna+imaginarni2+i;
+}
+}
+  </script>
+</head>
+
+<body class="body3">
+  <h1 class="nadpis3">Domácí úkol 3</h1>
+
+<div class="cast9 prichyceny">
+  <h3>Část 9</h3>
+  <form class="">
+<ul>
+  <li>Na co máš chuť?<input type="text" name="název" value="" placeholder="Název jídla"></li><br>
+  <li>Máš vůbec hlad? <input type="radio" name="A/N" value="Yes"> Ano
+                  <input type="radio" name="A/N" value="No"> Ne</li><br>
+  <li>Proč se vůbec ptám? <br> <input type="checkbox" name="nwm" value="Nevím"> Nevím <br>
+                      <input type="checkbox" name="nwm" value="Proč se zase ptáš?"> Proč se zase ptáš? <br>
+                      <input type="checkbox" name="nwm" value="Dej mi pokoj"> Dej mi pokoj</li><br>
+  <li>Měli bychom: <select class="" name="">
+                    <option value="" disabled selected>Vyber možnost</option>
+                    <option value="něco1">Jít spát</option>
+                    <option value="něco2">Jít cvičit</option>
+                    <option value="něco 3">Jíst</option>
+                  </select> </li>
+</ul>
+
+
+
+
+  </form>
+  <p>Toto okno má být popsané nějak.</p>
+</div>
+
+<div class="uzavrit posun">
+<h2 class="kalkukacka1">Kalkulačna na kvadratickou rovnici</h2>
+<h4>Řešení kvadratické rovnice</h4>
+<form>
+<ul>
+<li><p>a = <input type="text" name="konstanta" value="" id="myText_a" placeholder="konstanta a"> </p>
+  <p>b = <input type="text" name="konstanta" value="" id="myText_b" placeholder="konstanta b"> </p>
+  <p>c = <input type="text" name="konstanta" value="" id="myText_c" placeholder="konstanta c"> </p>
+
+
+</ul>
+</form>
+<button type="button" name="button" onclick="funkce()">Zkus toto</button>
+<li>Je kořen reálný?: <span id="Diskriminant"></span> </li>
+<li>Diskriminant: <span id="diskriminant1"></span> </li>
+<li>Hodnoty kořene: <ul>
+                      <li>Reálná část: <ul>
+                        <li>x<span class="index_dolni1">1 = <span id="rkoren1"></span> </span></li>
+                        <li>x<span class="index_dolni1">2 = <span id="rkoren2"></span> </span> </li>
+                      </ul> </li>
+                      <li>Imaginární část:<ul>
+                        <li>x<span class="index_dolni1">1 = <span id="ikoren1"></span> </span></li>
+                        <li>x<span class="index_dolni1">2 = <span id="ikoren2"></span> </span></li>
+                      </ul>
+                      </li>
+                      </ul> </li>
+
+</div>
+
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <span class="Sticky">Sticky marshmallow</span>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+  <p>a,b,c</p>
+
+
+
+  <a href="domaci_ukol1.html">domácí úkol 1</a>
+  <a href="domaci_ukol2.html">domácí úkol 2</a>
+</body>
+
+</html>

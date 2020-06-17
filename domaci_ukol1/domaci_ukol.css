@@ -1,0 +1,107 @@
+h1{border-style: dashed;
+  border-radius: 15px;
+  border-radius: 7px;
+  border-color: #000066}
+
+/*domací ukol 1*/
+.body1{background: #ccccff}
+.nadpis1{background: #9966ff;text-shadow: grey 2px 2px 5px}
+.kurzor1{cursor: cell;}
+
+
+/*domácí ukol 2*/
+.body2{background: #809fff}
+.nadpis2{background: #1a75ff}
+.kurziva:hover{font-style: italic;}
+.tucne:hover{font-style: italic;}
+
+.kurziva:hover + .tucne{font-weight: bold;}
+
+.zmena:hover{cursor: alias;color: #e6e6ff}
+
+.najeti{
+  position: relative;
+  display: inline-block;
+}
+.najeti2{
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.najeti:hover .najeti2{display: block;}
+
+.najetii{
+  position: relative;
+  display: inline-block;
+}
+
+.najetii2{
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+
+.najetii:hover .najetii2{display: block;}
+
+.link{border-style: inset; border-color: #000066}
+
+
+/*domácí úkol 3*/
+.body3{background: #70db70}
+.nadpis3{background: #009933}
+
+span.sticky{
+  font-size: 200%;
+  width: 145px;
+  height: 23px;
+  position: sticky;
+  top: 0;
+  border-style: double;
+  border-width: thick;
+  border-color: #003300;
+  background-color: #009900;
+}
+
+.cast9{
+  border-style: inset;
+  border-width: thin;
+  border-color: #00ff80;
+  background-color: #b3ffd9;
+  width: 360px;
+  height: 310px;
+  display: block;
+}
+
+.prichyceny{
+  position: fixed;
+  right: 15%;
+  top: 33%;
+}
+
+/*Kalkukačka*/
+.kalkukacka1{border-style: groove;
+border-color: #003366;
+background-color: #00cc99;
+width: 380px;}
+.uzavrit{
+  border-style: dotted;
+  border-width: medium;
+  border-spacing: 50px;
+  border-color: #282828;
+  background: #A8A8A8;
+  width: 400px;
+  height: auto;
+}
+.posun{
+  position: absolute;
+  left: 5%
+}
+.index_dolni1{
+  vertical-align: sub;
+}
