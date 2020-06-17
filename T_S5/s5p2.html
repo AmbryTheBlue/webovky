@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Cykly část 2</title>
+
+  </head>
+  <body>
+    <h1>Proč využít while?</h1>
+
+    <h2>úloha</h2>
+    <p>Máme zadané kladné celé číslo n. Nyní provádímě tyto 2 kroky: pokud je dělitelné 4, tak ho vydělíme 4, pokud dělitelné 4 není, tak přičteme 3. Kolik kroků se provede, než se číslo n změní na číslo menší než 4</p>
+    <p id="zadani"> n = 65432 <br> </p>
+    <h3>Řešení</h3>
+    <p id="reseni"></p>
+    <h2>Úloha 2</h2>
+    <p id="jaaa"> </p>
+    <h3>Řešení</h3>
+    <p id="zvykacka"></p>
+    <h2>Úloha 3</h2>
+    <p>Kolik je čísel dělitelných 13 menších než 10 000?</p>
+    <p id="lizatko"></p>
+    <p></p>
+    <h2>ÚKOLY - úlohy</h2>
+  <ul>
+    <li>Úloha 3</li>
+    <li>Myslím si libovolné desetinné číslo do 1000. Uhodni ho zpřestností na 4 desetinná místa. Odpovědí na dotaz je ti informace, zda je menší nebo větší. - Asi too hard, alespoň teretický postup</li>
+    <li>Vytvoř podobnu úlohu pro čísla 2 a 5</li>
+  </ul>
+  <h1>Odkazy</h1>
+  <a href="../main.html">hlavní stránka</a> <br>
+  <a href="s5p2.html">Další část</a>
+  <h3>Další zdroje</h3>
+  <ul>
+    <li>prázdno</li>
+  </ul>
+
+  <script>
+  var n = 165454;
+  var kroky = 0;
+
+  document.getElementById("zadani").innerHTML = "n = " + n;
+
+  while (n>=4) {
+    kroky++;
+    if(n%4 == 0){
+      n = n / 4;
+    }
+    else {
+      n = n + 3;
+    }
+    console.log(n);
+  }
+  document.getElementById("reseni").innerHTML = kroky;
+
+var m=27468276;
+var zacnem=1;
+document.getElementById("jaaa").innerHTML="m="+m;
+while (m>=10) {
+  zacnem = zacnem+1;
+  if(m%5==0){
+    m=m/5;
+  }
+  else {
+    m=m+2;
+  }
+  console.log(m);
+}
+document.getElementById("zvykacka").innerHTML=zacnem;
+
+var o=10000;
+var reseni=0;
+
+for (var i = 0; i < o; i++) {
+  if (i%13==0) {
+    console.log(i);
+    reseni=reseni+1;
+}
+}
+
+document.getElementById("lizatko").innerHTML= reseni;
+  </script>
+<script type="text/javascript">
+</script>
+  </body>
+</html>
