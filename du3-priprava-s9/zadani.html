@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cz" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>opakovani javascriptu</title>
+    <link rel="stylesheet" href="../s8-opakovaniJS/s8p1.css">
+    <script src="ukoly.js">
+    </script>
+  </head>
+  <body>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#">Domů</a></li>
+            <li><a href="#">O mně</a> </li>
+            <li><a href="#">Dovednosti</a></li>
+            <li><a href="#">Reference</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+        </nav>
+        </header>
+
+    <article class="article">
+    <h1>Druhé Ambryho úkoly</h1>
+    <h3>Jen stránka pro spuštění javascriptu, všechno info ve zdrojáku a výpis do konzole!</h3>
+
+      <section>
+    <ol style="list-style-type: georgian;">
+      <h3>Opakování cyklů</h3>
+      <li>Máš $pole$ s náhodnými hodnotami (v rozmezí 0-100) a tvým cílem je vytvořit nové pole, kde budou hodnoty z prvního pole seřazeny od největší po nejmenší. Jeden ze způsobů řešení: vždy v prvním poli najít největší hodnotu a tu uložit jako první (respektive nultý) prvek nového pole.
+        <br> Výsledné pole vypiš do konzole! </li>
+      <li>Dostaneš náhodně vygenerované celé číslo $k$ do 10 000. Budeš provádět operaci dokud se nedostaneš na číslo menší než 12. Operace je následující: Je-li číslo dělitelné 3, tak vyděl třemi a přičti 2. Je-li dělitelé pěti, tak přiči 5 a vyděl 5. Není-li ani jedno, tak přičti 3. </li>
+      <h3>Opakování funkce</h3>
+      <li>Dostaneš 3 proměnné a,b,c. <ol style="list-style-type: katakana;">
+        <li>Vytvoř funkci, která ověří jestli mohou stvořit trojúhelník. Bude vracet hodnotu True/False</li>
+        <li>Vytvoř funkci, která zjistí zda se jedná o pravoúhlý trojůhelník. Jako návratová hodnota bude text, který bude písmeno označující přeponu tohoto pravpúhlého trojúhelníku ("a", "b", "c"). V případě, že to není pravoúhlý trojúhelník, tak bude vracet honodtu "ne"</li>
+      </ol> </li>
+      <li>Dostaneš 3 proměnné x,y,z.<ol style="list-style-type: katakana-iroha;">
+        <li>Vytvoř funkci, která vrací "a" nebo "g" podle toho jestli je to aritmetická respektive geometrická posloupnost. Není-li to ani jedno bude funkce vracet "n"</li>
+        <li>Vytvoř funkci, která vypočítá differenci respektive kvocient (pomocí 3 proměnných a informace zda je to "g" nebo "a"). Klidně vytvoř 2 funkce pro každou část. Tato funkce bude vracet číslo odpovídající diferenci/kvocientu</li>
+        <li>Vytvoř funkci, která vypočítá součet nekonečené řady, pokud zadaná 3 čísla jsou geometrická posloupnost, která konverguje (tj. kvocient v absolutní hodnotě je menší než 1)</li>
+      </ol> </li>
+      <li> <span style="color: red; font-weight: bold;">Super hardcore úkol s tématikou hvězdné brány a soubojovým systémem na bázi Proroctví</span> (To je asi fakt moc těžký. To si možná udělám já jako cvičení xD ) <br>
+        Probíhá 3 straná bitva mezi Asgardy, Goa'uldy a Replikátory. Každá strana je reprezentována polem lodí, které mají nějakou sílu, která je reprezentována číslem do 1000. Je to tahová hra, takže každá strana může provést jen jeden útok za tah. Tahy se opakoují dokud nezbývá jen jedna vítězná strana. Souboj dvou lodí vypadá tak, že se jejich síly vynásobí náhodnými čísly (to co poskytuje Math.random - tj. číslo od 0 do 1).
+        Loď která bude mít vyšší toto číslo (= útok) vyhraje. Loď, která prohraje si od své síly odečte rozdíl sil lodí + 15 (protože lodě můžou mít stejnou sílu, tak aby se to nějak hýbalo).
+        <ol style="list-style-type: hiragana-iroha;">
+          <li>Goa'uldská strategie je zaútočit svoují nejslabší lodí na nejslabší loď náhodně zvoleného protivníka</li>
+          <li>Replikátoři útočí svojí nejsilnější lodí na nejslabší loď protivníka, který má nejmenší celkovou sílu (součet sil všech lodí)</li>
+          <li>Asgardi útočí svojí nesjilnější lodí na protivníka, který má největší celkovou sílu</li>
+        </ol>
+       </li>
+
+    </ol>
+    </section>
+  </article>
+
+    <footer>
+      Vytvořil &copy; Ambry 2020 pro <a href="#">mě (haha)</a>, css styl (a hlavička s patičkou) od Terky
+    </footer>
+
+  </body>
+</html>
