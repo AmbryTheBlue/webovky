@@ -7,8 +7,10 @@ var je_to_tecka = ".";
 //definice funkcí
 function zobraz(){
   console.log("Zobrazeno aktuální pole:\n" + pole);
+  console.log("Poslední znak: " + posledni_znak);
   //document.getElementById('Zapis').innerHTML = pole.join(" ");
 }
+
 function pridejCislo(cislo){
   //pokud je poslendi znak cislo nebo '.'
   if (posledni_znak==je_to_cislo|| posledni_znak==je_to_tecka) {
@@ -22,6 +24,7 @@ function pridejCislo(cislo){
   }
   zobraz();
 }
+
 function pridejZnak(znak){
   if (posledni_znak=="n") {
     pole[pole.length] = znak;
@@ -74,12 +77,13 @@ function vymazPredchozi(){
     console.log("Pole je prázdné, nejde nic smazat");
   }
   else{
-  if(posledni_znak==je_to_cislo){
-    if(pole[pole.length-1].length == 1){
+  if(posledni_znak=="n"){
+    if(pole[pole.length-1].toString().length == 1){
       smazano = pole.pop();
-      console.log("Smazáno poslední číslo, protože má jen jednu číslici" + smazano);
+      console.log("Smazáno poslední číslo, protože má jen jednu číslici: " + smazano);
+      console.log(pole.length);
       //co je prechozi znak
-      if(typeof pole.length == "undefined"){
+      if(pole.length == 0){
         //pole má delku 0
         posledni_znak = "";
       }
@@ -89,26 +93,26 @@ function vymazPredchozi(){
       }
     }
     else {
-      var pocet_cislic = pole[pole.length-1].length;
-      var posledni_cislo = pole[pole.length-1];
-      smazano = pole[pole.length-1].pop();
+      var posledni_cislo = pole[pole.length-1].toString();
+      console.log(posledni_cislo);
+      var smazano = posledni_cislo.substring(posledni_cislo.length - 2, posledni_cislo.length - 1);
+      posledni_cislo = posledni_cislo.substring(0, posledni_cislo.length - 1);
       console.log("Smazána poslední číslice: " + smazano + " z posledního čísla:" + posledni_cislo);
       //ověření, jeslti je poslední znak čísla nyní '.' nebo číslice nebo
-      pocet_cislic = pole[pole.length-1].length;
-      var posledni_cislice = pole[pole.length-1][pocet_cislic-1];
-      if(posledni_cislice=="."){
-        posledni_znak = ".";
-        console.log("Poslední znak čísla je '.' ");
+      if(posledni_cislo.substring(posledni_cislo.length - 2, posledni_cislo.length - 1)=="."){
+        console.log("Poslední znak čísla byla '.'. Bude smazána taktéž! ");
+        posledni_cislo = posledni_cislo.substring(0, posledni_cislo.length - 2);
       }
-      else {
-        //posledím znakem je stále číslo
-        posledni_znak = je_to_cislo;
-      }
+      //posledním znakem je stále číslo
+        posledni_znak = "n";
+      pole[pole.length-1] = Number(posledni_cislo);
+
     }
   }
   else {
     smazano = pole.pop();
     console.log("Smazán poslední znak: " + smazano);
+    posledni_znak = "n";
   }
 }
   zobraz();
