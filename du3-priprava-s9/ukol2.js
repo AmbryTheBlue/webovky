@@ -17,7 +17,20 @@ function kontrola(zadani, reseni) {
   }
   spravne = zadani;
   console.log("Správné řešení = " + spravne);
-  console.log("Tvoje řešení = " + );
+  console.log("Tvoje řešení = " + reseni);
 }
 
-kontrola(k,5);
+var j = k;
+while (k>12) {
+if ((k%3)==0) {
+  k = k/3 + 2;
+}
+else if ((k%5)==0) {
+  k = (k + 5)/5;
+}
+else {
+  k = k + 3;
+}
+}
+
+kontrola(j,k);

@@ -36,6 +36,13 @@ function kontrola(zadani, jaka_rada, kvocient_diference){
   else {
     console.log("Nesprávně určená řada jako: " + jaka_rada +". Ve skutečnosti je to: " + zadani[0]);
   }
+
+  if (kvocient_diference==zadani[4]) {
+      console.log("Správně určený kvocient/diference jako: " + kvocient_diference);
+    }
+    else {
+      console.log("Nesprávně určená kvocient/diference jako: " + kvocient_diference +". Ve skutečnosti je to: " + zadani[4]);
+    }
 }
 
 zadani = generator();

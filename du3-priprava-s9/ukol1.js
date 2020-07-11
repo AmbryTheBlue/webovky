@@ -50,5 +50,20 @@ var pole2 = []
 for (var i = 0; i < pole.length; i++) {
   pole2[i] = pole[i];
 }
-
-kontrola(pole, pole2);
+var novy_pole = [];
+while (pole.length > 0) {
+  var nejvetsi = 0;
+  var poradi = 0;
+  for (var i = 0; i < pole.length; i++) {
+    if (pole[i]>nejvetsi) {
+      nejvetsi = pole[i];
+      poradi = i;
+  }
+  }
+  novy_pole.push(nejvetsi);
+  //console.log(nejvetsi);
+  pole.splice(poradi,1);
+  //console.log(pole);
+  //console.log(novy_pole);
+}
+kontrola(pole2, novy_pole);
