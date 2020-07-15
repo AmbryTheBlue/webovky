@@ -2,12 +2,13 @@
 <html lang="cz" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>2. opakovani javascriptu</title>
-    <link rel="stylesheet" href="../s8-opakovaniJS/s8p1.css">
-    <script src="prepinac.js">
+    <title>4. Domácí úkoly</title>
+    <link rel="stylesheet" href="../csska/ukoly.css">
+    <script src="ukol1.js" type="text/javascript">
     </script>
-    <script src="ukol1.js">
-
+    <script src="ukol2.js" type="text/javascript">
+    </script>
+    <script src="ukol3.js" type="text/javascript">
     </script>
   </head>
   <body>
@@ -22,28 +23,40 @@
           </ul>
         </nav>
         </header>
-
     <article class="article">
     <h1>4. Ambryho úkoly</h1>
-    <p>poslední měly číslovku "druhé", ale v souborovém systému to bylo du-3. Proto jsem "Třetí Ambryho úkoly" přeskočil, abych srovnal číslování</p>
+    <p>poslední měly číslovku "druhé", ale v souborovém systému to bylo du-3. Proto jsem "Třetí Ambryho úkoly" přeskočil, abych srovnal číslování
+      <br> A možná bych ještě upravil cssko. Ale kašlu na to xD
+    </p>
     <h3>Jen stránka pro spuštění javascriptu, všechno info ve zdrojáku a výpis do konzole!</h3>
-
+    <h4>Přepínač javascriptů</h4>
+    <div class="prepinac">
+      <button type="button" name="button" onclick="bez1()">Ukol1</button>
+      <button type="button" name="button" onclick="bez2()">Ukol2</button>
+      <button type="button" name="button" onclick="bez3()">Ukol3</button>
+    </div>
+    <br>
+    To je nová funkční (haha) novinka. Aby vše fungovalo, jak má je třeba, aby si psala svůj kód dovnitř funkcí bez1, bez2 a bez3. Jsou již připravené v souborech. Tlačítka výše potom z daného souboru zavolají právě tuto funkci.
       <section>
-    <ol style="list-style-type: georgian;">
-    </section>
+
+
+    <ol style="list-style-type: upper-roman;">
     <li> <span style="font-weight: bold;">Tříbarevný trojúhelník</span> Jsou dány 3 pole (červené, zelené a modré) reprezentující tyčky různých délek. Cílem bude určovat počet trojúhelníků, který je možný z daných tyček sestavit. Tj. součet délek 2 z nich musí být delší než délka zbylé. Urči: <ol>
       <li>Počet trojúhelníků, které je možné sestavit tak, aby každá strana měla jinou barvu. Nápověda: Ke každé červené vyber každou možnou zelenou. A ke každé této kombinaci vyzkoušej každou modrou a zjisti jestli z nich lze sestavit trojúhelník.</li>
-      <li>Počet trojúhelníků, které je možné sestavit z červené barvy, pokud každou tyčku můžeme použít jen jednou</li>
       <li>Počet trojúhelníků, které je možné sestavit z zelené barvy, pokud můžeme každou tyčku použít kolikrát chceme</li>
+      <li>Počet trojúhelníků, které je možné sestavit z červené barvy, pokud každou tyčku můžeme použít jen jednou</li>
       <li><span style="color: red">Počet tříbarevných trojúhelníků</span>, které je možné sestavit 1 nebo 2 tyček modrých a zbylé libovolné jiné barvy </li>
     </ol> </li>
-    <li> <span style="font-weight: bold;">Učení v praxi</span> Je dáno pole úkolů, které je třeba splnit. Toto pole obsahuje čísla, které označují časovou náročnost úkolu. Začíná se s rychlostí plnění jeden bod náročnosti za jednu časovou jednotku. Po dokončení nějakého úkolu se ale dělání úkolů zrychlí a to podle náročnosti dělání úkolu: <ol>
+    <li> <span style="font-weight: bold;">Učení v praxi</span> Je dáno pole úkolů, které je třeba splnit. Toto pole obsahuje čísla, které označují časovou náročnost úkolu. Začíná se s rychlostí plnění jeden bod náročnosti za jednu časovou jednotku. Po dokončení nějakého úkolu se ale dělání úkolů zrychlí a to podle náročnosti dělání úkolu:
+      <ol style="list-style-type: lower-latin;">
       <li>K aktuální rychlosti dělání úkolu (základní je 1.0) se přičte náročnost úkolu vydělená 200</li>
       <li>Aktuální rychlost dělání úkolu se vynásobí číslem 1.0 + podíl náročnosti úkolu a 200 </li>
     </ol>
-    <ol>
+    <br>
+    <ol  style="list-style-type: decimal;">
       <li>Zjisti pro oba způsoby učení, jestli je rychlejší postupovat od nejtěžšího úkolu po nejlehčí nebo od nejlehčího po nejtěžší</li>
-      <li> <span style="color: red">Optimálná postup</span> (nevymslel jsem žádné obecné pravidlo za ty 4 vteřiny co nad tím přemýšlím): Zjisti, v jakém pořadí řešit tyto úkoly, aby byl čas, za který jsou splněny. Stačí jen jeden ze způsobů učení, ale vytvoření pro oba je výhodou. Buď vyzkoušej všechny možnosti (těch je faktoriál počtu úkolů) a z nich vyber nejlepší. Nebo vymysli lepší algoritmus.</li>
+      <li> <span style="color: red">Optimálná postup</span> (nevymslel jsem žádné obecné pravidlo za ty 4 vteřiny co nad tím přemýšlím): Zjisti, v jakém pořadí řešit tyto úkoly, aby byl čas, za který jsou splněny nejmenší. Stačí jen jeden ze způsobů učení, ale vytvoření pro oba je výhodou.
+        Buď vyzkoušej všechny možnosti (těch je faktoriál počtu úkolů) a z nich vyber nejlepší. Nebo vymysli lepší algoritmus a zdůvodni jeho správnost.</li>
     </ol>
   </li>
     <li><span style="font-weight: bold;">Hvězdná brána: Zakňaktely</span> Zadání se skládá z informace kolikrát bylo vystřeleno ze zakňaktelu. A poté pole s čísli 0,1 nebo 2. Platí pravidla: 1 výstřel omráčí, 2 zabijí a 3 rozloží. Pole nám podává informaci o stavu bojiště po bitvě: 0=živý, 1=omráčený, 2=mrtvý<ol>
@@ -52,8 +65,8 @@
     </ol></li>
 
   </ol>
+    </section>
   </article>
-
     <footer>
       Vytvořil &copy; Ambry 2020 pro <a href="#">mě (haha)</a>, css styl (a hlavička s patičkou) od Terky
     </footer>
