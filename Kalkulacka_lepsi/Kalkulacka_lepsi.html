@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<link rel="stylesheet" href="Kalkulacka_lepsi.css">
+  <head>
+    <meta charset="utf-8">
+    <title>Kalkulačka</title>
+  </head>
+
+  <body>
+    <header>
+      <nav id="menu">
+        <h1>Kalkulačka</h1>
+          <p class="menuu"><a href="#">Domů</a></p>
+          <p class="menuu"><a href="#">O nás</a></p>
+          <p class="menuu"><a href="#">Dovednosti</a></p>
+          <p class="menuu"><a href="#">Reference</a></p>
+          <p class="menuu"><a href="#">Jiné projekty</a></p>
+          <p class="menuu"><a href="#">Kontakt</a></p>
+      </nav>
+    </header>
+    <article class="article">
+      <header>
+        <h2>O nás</h2>
+        <p>Gymji absolventi. Původ z nejlepší třídy. Občas divní a občas hovada?</p>
+      </header>
+    <section class="">
+      <div class="tlacitka">
+        <button type="button" name="button" class="button" onclick="pridejCislo(1)">1</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(2)">2</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(3)">3</button>
+        <button type="button" name="button" class="button" onclick="vymazPredchozi()">DEL</button>
+        <button type="button" name="button" class="button" onclick="vymazCele()">AC</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(4)">4</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(5)">5</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(6)">6</button>
+        <button type="button" name="button" class="button" onclick="pridejZnak('*')">*</button>
+        <button type="button" name="button" class="button" onclick="pridejZnak('/')">÷</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(7)">7</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(8)">8</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(9)">9</button>
+        <button type="button" name="button" class="button" onclick="pridejZnak('+')">+</button>
+        <button type="button" name="button" class="button" onclick="pridejZnak('-')">-</button>
+        <button type="button" name="button" class="button" onclick="pridejCislo(0)">0</button>
+        <button type="button" name="button" class="button" onclick="pridejZnak('(')">(</button>
+        <button type="button" name="button" class="button" onclick="pridejZnak(')')">)</button>
+        <button type="button" name="button" class="button" onclick="pridejZnak('.')">.</button>
+        <button type="button" name="button" class="button" onclick="vypocitej()">=</button>
+      </div>
+    </section>
+    <div class="cistic"></div>
+    </article>
+    <footer>Vytvořil &copy; Ambry a Terka; 2020</footer>
+  </body>
+</html>
