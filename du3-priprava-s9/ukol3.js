@@ -20,16 +20,16 @@ function generator() {
     b = Math.round(Math.random()*90) + 10;
     gama = 90;
     while (gama==90) {
-      gama = (Math.round(Math.random()*178) +1)/360*2*Math.PI;
+      gama = (Math.round(Math.random()*178) +1);
     }
-    c = Math.sqrt(a**2 + b**2 - a*b*Math.cos(gama));
+    c = Math.sqrt(a**2 + b**2 - a*b*Math.cos(gama/360*2*Math.PI));
   }
   else {
     //pravouhly trojuhelnik
     pole[0] = true;
     var x = Math.round(Math.random()*90) + 10;
     var y = Math.round(Math.random()*90) + 10;
-    var z = x**2 + y**2;
+    var z = Math.sqrt(x**2 + y**2);
     var p = Math.random();
     if (p<0.33) {
       a = z;

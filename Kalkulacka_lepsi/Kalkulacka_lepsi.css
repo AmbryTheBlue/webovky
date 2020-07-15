@@ -8,45 +8,56 @@ button{
   color: white;
 }
 h1{
-  font-family: Arial;¨
+  font-family: Arial;
   font-weight: bold;
   color: #E4C5AF;
   text-shadow: 3px 3px 7px #F4E1D7;
   text-align: center;
   font-size: 40px;
+  float: left;
+  border: 2px solid red;
+  padding: 0% 0% 3% 0%;
 }
 article header{
   float: left;
-    width: 720px;
+    width: 40%;
 }
+
 article section{
   float: left;
-  background: #9ECE9A;
+  width: 60%;
+}
 
-}
 header{
-  height: 80px;
+  height: 50px;
 }
+
 nav ul{
-  margin: 0px;
   list-style-type: none;
+}
+nav ul li{
+  float: left;
+  padding: 0% 3.5% 0% 3.5%;
+  margin: 0 5px;
+  font-size: 17px;
+  height: 73px;
+  line-height: 4.3em;
+  text-align: center;
+  border: 2px solid black;
+}
+
 }
 #menu{
 display: flex;
 flex-direction: row;
 font-family: Verdana;
 font-size: 1.7em;
+text-align: center;
+}
 
-}
-.menuu{
-margin: 1% 2% 1% 2%;
-padding: 6px 6px 6px 6px;
-border: 2px solid black;
-}
 nav a{
   color: white;
   text-decoration: none;
-
 }
 
 .tlacitka{
@@ -55,12 +66,13 @@ nav a{
   grid-template-rows: repeat(auto, 1fr);
   padding: 120px 3px 3px 3px;
   margin: 3px 3px 3px 3px;
-  box-shadow: 3px 3px 7px ##667F62;
+  box-shadow: 3px 3px 7px #667F62;
   border: 6px solid #263025;
   border-radius: 5px;
   width: 540px;
   height: 30%;
   text-align: center;
+  background: #9ECE9A;
 }
 .button{
 font-family: Verdana;
@@ -90,8 +102,9 @@ background-color: #074F57;
 }
 .article{
   height: auto;
-  background: #74A57F;
   box-shadow: 3px 3px 7px grey;
+      background: #74A57F;
+      margin-top: 8%;
 }
 .menuu:hover{
   background-color: #074F57;
