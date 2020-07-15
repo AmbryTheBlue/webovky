@@ -8,7 +8,7 @@ function generator(){
     green.push(Math.round(Math.random()*200));
   }
   var blue = [];
-  for (var i = 0; i < Math.round(Math.random()*5 + 5); i++) {
+  for (var i = 0; i < Math.round(Math.random()*5 + 5); i  ++) {
     blue.push(Math.round(Math.random()*200));
   }
   return [red, green, blue]
@@ -79,15 +79,78 @@ function kontrolator3(zadani, reseni){
   }
 }
 
+function kontrolator4(zadani, reseni){
+  var spravne = 0;
+  for (var i = 0; i < zadani[2].length; i++) {
+    //druhe tycka je taktez modra=2
+    for (var j = i+1; j < zadani[2].length; j++) {
+      //treti tycka je zelena=1
+      for (var k = j+1; k < zadani[1].length; k++) {
+        if (zadani[2][i] + zadani[2][j] > zadani[1][k] && zadani[2][i] + zadani[1][k] > zadani[2][j] && zadani[1][k] + zadani[2][j] > zadani[2][i]) {
+          spravne++;
+        }
+      }
+      //treti tycka je cervena=0
+      for (var k = j+1; k < zadani[0].length; k++) {
+        if (zadani[2][i] + zadani[2][j] > zadani[0][k] && zadani[2][i] + zadani[0][k] > zadani[2][j] && zadani[0][k] + zadani[2][j] > zadani[2][i]) {
+          spravne++;
+        }
+      }
+    }
+    //druha tycka je zelena=1
+    for (var j = i+1; j < zadani[1].length; j++) {
+      //treti tycka je zelena=1
+      for (var k = j+1; k < zadani[1].length; k++) {
+        if (zadani[2][i] + zadani[1][j] > zadani[1][k] && zadani[2][i] + zadani[1][k] > zadani[1][j] && zadani[1][k] + zadani[1][j] > zadani[2][i]) {
+          spravne++;
+        }
+      }
+      //treti tycka je cervena=0
+      for (var k = j+1; k < zadani[0].length; k++) {
+        if (zadani[2][i] + zadani[1][j] > zadani[0][k] && zadani[2][i] + zadani[0][k] > zadani[1][j] && zadani[0][k] + zadani[1][j] > zadani[2][i]) {
+          spravne++;
+        }
+      }
+    }
+    //druha tycka je cervena=0
+    for (var j = i+1; j < zadani[0].length; j++) {
+      //treti tycka je zelena=1
+      for (var k = j+1; k < zadani[1].length; k++) {
+        if (zadani[2][i] + zadani[0][j] > zadani[1][k] && zadani[2][i] + zadani[1][k] > zadani[0][j] && zadani[1][k] + zadani[0][j] > zadani[2][i]) {
+          spravne++;
+        }
+      }
+      //treti tycka je cervena=0
+      for (var k = j+1; k < zadani[0].length; k++) {
+        if (zadani[2][i] + zadani[0][j] > zadani[0][k] && zadani[2][i] + zadani[0][k] > zadani[0][j] && zadani[0][k] + zadani[0][j] > zadani[2][i]) {
+          spravne++;
+        }
+      }
+    }
+  }
+  console.log("Správné řešení:" + spravne);
+  console.log("Tvoje řešení: " + reseni);
+  if (spravne==reseni) {
+    console.log("Máš to dobře! Výborně");
+  }
+  else {
+    console.log("Máš to špatně :(");
+  }
+}
+
 function bez1(){
-  console.log("Ahoj tu ukol 1");
+  console.log("---------------- ukol 1----------------");
 
   var vstup = generator();
   var cervena = vstup[0];
   var zelena = vstup[1];
   var modra = vstup[2];
   //zde piš svůj kód
-  kontrolator1(vstup,0);
-  kontrolator2(vstup,2);
-  kontrolator3(vstup,0);
+
+  //zde otestuj svoje řešení jeho vložením do funkce místo promenné tvoje_reseni
+  tvoje_reseni = 0;
+  kontrolator1(vstup,tvoje_reseni);
+  kontrolator2(vstup,tvoje_reseni);
+  kontrolator3(vstup,tvoje_reseni);
+  kontrolator4(vstup,tvoje_reseni);
 }
