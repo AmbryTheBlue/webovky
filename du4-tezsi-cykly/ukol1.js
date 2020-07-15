@@ -11,7 +11,7 @@ function generator(){
   for (var i = 0; i < Math.round(Math.random()*5 + 5); i  ++) {
     blue.push(Math.round(Math.random()*200));
   }
-  return [red, green, blue]
+  return [red, green, blue];
 }
 
 function kontrolator1(zadani, reseni){
