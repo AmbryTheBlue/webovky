@@ -1,9 +1,9 @@
 //globální proměnné
 var cele = "";
 var plz = 0; //počet levých závorek
-var vsechny_znaky= "()*+-/."
-var zakladni_znaky="+-*/"
-var vsechny_cislice = "0123456789"
+var vsechny_znaky= "()*+-/.";
+var zakladni_znaky="+-*/";
+var vsechny_cislice = "0123456789";
 
 // TODO: kontrola existence desetinné tečky už jednou v tom čísle
 
@@ -82,9 +82,7 @@ function pridejZnak(znak){
 }
 function vymazPredchozi(){
   var vymazano = cele.charAt(cele.length-1);
-  console.log(" cele: " + cele);
   cele = cele.slice(0, cele.length-1);
-  console.log("Znova cele: " + cele);
   console.log("Byl vymazán znak: " + vymazano);
   zobraz();
 }
