@@ -1,0 +1,99 @@
+body{
+  background: #077187;
+}
+footer{
+  color: white
+}
+button{
+  color: white;
+}
+h1{
+  font-family: Arial;¨
+  font-weight: bold;
+  color: #E4C5AF;
+  text-shadow: 3px 3px 7px #F4E1D7;
+  text-align: center;
+  font-size: 40px;
+}
+article header{
+  float: left;
+    width: 720px;
+}
+article section{
+  float: left;
+  background: #9ECE9A;
+
+}
+header{
+  height: 80px;
+}
+nav ul{
+  margin: 0px;
+  list-style-type: none;
+}
+#menu{
+display: flex;
+flex-direction: row;
+font-family: Verdana;
+font-size: 1.7em;
+
+}
+.menuu{
+margin: 1% 2% 1% 2%;
+padding: 6px 6px 6px 6px;
+border: 2px solid black;
+}
+nav a{
+  color: white;
+  text-decoration: none;
+
+}
+
+.tlacitka{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  padding: 120px 3px 3px 3px;
+  margin: 3px 3px 3px 3px;
+  box-shadow: 3px 3px 7px ##667F62;
+  border: 6px solid #263025;
+  border-radius: 5px;
+  width: 540px;
+  height: 30%;
+  text-align: center;
+}
+.button{
+font-family: Verdana;
+font-size: 2em;
+text-shadow: 1.5px 1.5px 5px #000000;
+padding: 15% 15% 15% 15%;
+border: 2px solid #000000;
+border-radius: 10px;
+margin: 2% 2% 2% 2%;
+background-color: #074F57;
+}
+.button:hover{
+  font-family: Verdana;
+  font-size: 2em;
+  text-shadow: 1.5px 1.5px 5px #000000;
+  padding: 15% 15% 15% 15%;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  margin: 2% 2% 2% 2%;
+  cursor: pointer;
+  background-color: #074F57;
+  box-shadow: 3px 3px 7px grey;
+}
+
+.cistic{
+  clear: both;
+}
+.article{
+  height: auto;
+  background: #74A57F;
+  box-shadow: 3px 3px 7px grey;
+}
+.menuu:hover{
+  background-color: #074F57;
+  cursor: pointer;
+}
