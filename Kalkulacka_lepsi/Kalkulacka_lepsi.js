@@ -2,7 +2,7 @@
 var cele = "";
 var plz = 0; //počet levých závorek
 var vsechny_znaky= "()*+-/.";
-var zakladni_znaky="+-*/";
+var operatory="+-*/";
 var vsechny_cislice = "0123456789";
 
 //definice funkcí
@@ -47,15 +47,15 @@ function pridejZnak(znak){
    }
  }
  else if (znak=="(") {
-   if (zakladni_znaky.includes(cele.charAt(cele.length-1)) || cele.charAt(cele.length-1)=="(") {
+   if (operatory.includes(cele.charAt(cele.length-1)) || cele.charAt(cele.length-1)=="(") {
      cele += "(";
      plz++;
    }
    else {
-     alert("Před levou závorkou musí být nějaký z operátorů: '" + zakladni_znaky + "'\n nebo také levá závorka '(' '");
+     alert("Před levou závorkou musí být nějaký z operátorů: '" + operatory + "'\n nebo také levá závorka '(' '");
    }
  }
- else if (zakladni_znaky.includes(znak)) {
+ else if (operatory.includes(znak)) {
    //pridavama nejaky operator
    if (vsechny_cislice.includes(cele.charAt(cele.length-1)) || cele.charAt(cele.length-1)==")") {
      cele += znak;
@@ -100,14 +100,120 @@ function vymazCele(){
   zobraz();
 }
 
+function vyres(text){
+  //vyresi text, který je předložen. Předpokládá neexistenci závorek.
+  var oper = "";
+  console.log("Co bylo zadano fci vyres() " + text);
+  while (true) {
+    if (text.includes("*")) {
+      oper = "*";
+    }
+    else if (text.includes("/")) {
+      oper = "/";
+    }
+    else if (text.includes("+")) {
+      oper = "+";
+    }
+    else if (text.includes("-")) {
+      oper = "-";
+    }
+    else {
+      console.log("Retezec uz neobsahuje žádné operátory. Výpočet ukončen!");
+      break;
+    }
+    var c = text.indexOf(oper);
+    if(c==0){
+      //operátor je na začátku řetězce
+      if (oper=="+"||oper=="-") {
+        console.log("Řetězec (snad) úspěšně vypočítán!");
+        break;
+      }
+      else {
+        console.log("Nějakám způsobem se dostalo '*' nebo '/' na začátek řetězce :( Nelze vypočítat");
+      }
+    }
+    //systém pro nalezení pozice předchozího operátoru
+    var a = 0;
+    for (var i = 0; i < operatory.length; i++) {
+      var pozice = text.substring(0,c).lastIndexOf(operatory.charAt(i));
+      pozice = pozice+1;
+      if (pozice>a) {
+        a = pozice;
+      }
+    }
+    //systém pro nalezení následujícího operátoru
+    var b = text.lenght;
+    for (var i = 0; i < operatory.length; i++) {
+      var pozice = text.substring(c+1).indexOf(operatory.charAt(i));
+      pozice = pozice + c+1;
+      if (pozice<b) {
+        b = pozice;
+      }
+    }
+    //cas na vypocet!
+    var x = Number(text.substring(a,c));
+    var y = Number(text.substring(c+1,b));
+    var z = 0;
+    switch (oper) {
+      case "*":
+        z = x * y;
+        break;
+      case "/":
+        z = x / y;
+        break;
+      case "+":
+        z = x + y;
+        break;
+      case "-":
+        z = x - y;
+        break;
+      default:
+        console.log("WTF chyba!");
+        z = 1;
+    }
+    //Prepsání počítaného vypočítaným
+    text = text.replace(text.substring(a,b), z.toString());
+    console.log("Využit operátor: '" + oper + "'");
+    console.log("Jak to vyres() upravil: " + text);
+  }
+  console.log("Část (asi v závorkách) úspěšně vypočítána!");
+  return text;
+}
+
 function vypocitej(){
   console.log("Výpočet zatím moc nefunguje!");
-  while (cele.length>0) {
-    console.log("Aktuální text: " + cele);
-    while (cele.includes("(")) {
-
+  if (plz!=0) {
+    console.log("Počet závorek asi nesedí, a tak to nebude možné vypočítat. Uvidíme xD");
+  }
+  var chyba = 0;
+  var bez = 1;
+  console.log("Aktuální text: " + cele);
+  while (cele.includes("(")) {
+    if (cele.includes(")")) {
+      var b = cele.indexOf(")");
+      var a = cele.substring(0,b).lastIndexOf("(");
+      var spocitano = vyres(cele.substring(a+1,b));
+      cele = cele.replace(cele.substring(a,b+1), spocitano);
+      console.log("Aktuální text: " + cele);
+    }
+    else {
+      alert("Nesprávný počet závorek. Výpočet zrušen!");
+      chyba = 1;
+      bez = 0;
+      break;
     }
   }
+  if (chyba>0) {
+    console.log("Vyskytla se chyba: " + chyba);
+  }
+  else {
+    cele = vyres(cele);
+    console.log("Výpočet dokončen! Výsledek je: " + cele);
+    zobraz();
+  }
+
 }
+
+
 
 console.log("Vítejte v javascriptu této Kalkulačky!");
