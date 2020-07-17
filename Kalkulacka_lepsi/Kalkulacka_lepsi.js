@@ -5,8 +5,6 @@ var vsechny_znaky= "()*+-/.";
 var zakladni_znaky="+-*/";
 var vsechny_cislice = "0123456789";
 
-// TODO: kontrola existence desetinné tečky už jednou v tom čísle
-
 //definice funkcí
 function zobraz(){
   console.log("Zobrazeno aktuální:\n" + cele);
@@ -30,12 +28,19 @@ function pridejZnak(znak){
    alert("Za desetinnou tečku nelze přidat žádný znak. Pouze číslice!")
  }
  else if (znak==".") {
-   if (vsechny_znaky.includes(cele.charAt(cele.length-1))) {
-     alert("Za žádný znak není možné dát desetinnou tečku. Všechna desetinná čísla musí mít i číslici před desetinnou tečkou.")
+   if (vsechny_znaky.includes(cele.charAt(cele.length-1))||cele.length==0) {
+     alert("Za žádný znak (nebo prázdný text) není možné dát desetinnou tečku. Všechna desetinná čísla musí mít i číslici před desetinnou tečkou.")
    }
    else if(vsechny_cislice.includes(cele.charAt(cele.length-1))){
      //předchozí znak je číslice
-     cele += ".";
+     if (cele.lastIndexOf(".")>cele.lastIndexOf("+")&&cele.lastIndexOf(".")>cele.lastIndexOf("-")&&cele.lastIndexOf(".")>cele.lastIndexOf("/")&&cele.lastIndexOf(".")>cele.lastIndexOf("*")) {
+       //ověření jestli tohle číslo už nemá desetinnou tečku
+       alert("Mezi nějakým operátorem a touto desetinnou tečkou je jiná desetinná tečka -> Chyba: číslo nemůže mít 2 desetinné tečky");
+     }
+     else {
+       cele += ".";
+     }
+
    }
    else {
      console.log("Chyba v určování předchozího znaku při přidávání desetinné tečky");
@@ -56,7 +61,8 @@ function pridejZnak(znak){
      cele += znak;
    }
    else {
-     if ((znak=="-"||znak=="+")&& cele.charAt(cele.length-1)=="(") {
+     if (((znak=="-"||znak=="+")&&cele.charAt(cele.length-1)=="(")||((znak=="-"||znak=="+")&&cele.length==0)) {
+       // znaky + a - je možné dát i na začátek textu, nebo za levou závorku
        cele += znak;
      }
      else {
@@ -65,7 +71,7 @@ function pridejZnak(znak){
    }
  }
  else if (znak==")") {
-   if (plz>0) {
+   if (plz>0&&cele.length>0) {
      if (vsechny_cislice.includes(cele.charAt(cele.length-1))||cele.charAt(cele.length-1)==")") {
        cele += ")";
        plz--;
@@ -80,12 +86,14 @@ function pridejZnak(znak){
  }
  zobraz();
 }
+
 function vymazPredchozi(){
   var vymazano = cele.charAt(cele.length-1);
   cele = cele.slice(0, cele.length-1);
   console.log("Byl vymazán znak: " + vymazano);
   zobraz();
 }
+
 function vymazCele(){
   cele = "";
   console.log("Celé pole bylo smazáno!");
@@ -93,5 +101,13 @@ function vymazCele(){
 }
 
 function vypocitej(){
-  alert("Zatím nefunguje!");
+  console.log("Výpočet zatím moc nefunguje!");
+  while (cele.length>0) {
+    console.log("Aktuální text: " + cele);
+    while (cele.includes("(")) {
+
+    }
+  }
 }
+
+console.log("Vítejte v javascriptu této Kalkulačky!");
