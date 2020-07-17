@@ -142,17 +142,28 @@ function vyres(text){
       }
     }
     //systém pro nalezení následujícího operátoru
-    var b = text.lenght;
+    var b = text.length;
     for (var i = 0; i < operatory.length; i++) {
       var pozice = text.substring(c+1).indexOf(operatory.charAt(i));
+      //console.log(operatory.charAt(i));
+      //console.log("Pozice: " + pozice);
+      if(pozice>0){
       pozice = pozice + c+1;
-      if (pozice<b) {
-        b = pozice;
+      //console.log("upravena Pozice: " + pozice);
+      //console.log("b: " + b);
+        if (pozice<b) {
+          b = pozice;
+        }
       }
     }
     //cas na vypocet!
-    var x = Number(text.substring(a,c));
-    var y = Number(text.substring(c+1,b));
+    var x = text.substring(a,c);
+    console.log("x: " + x);
+    x = Number(x)
+    var y = text.substring(c+1,b);
+    console.log("y: " + y);
+    y = Number(y);
+
     var z = 0;
     switch (oper) {
       case "*":
