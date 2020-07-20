@@ -7,17 +7,6 @@ footer{
 button{
   color: white;
 }
-h1{
-  font-family: Arial;
-  font-weight: bold;
-  color: #E4C5AF;
-  text-shadow: 3px 3px 7px #F4E1D7;
-  text-align: center;
-  font-size: 40px;
-  float: left;
-  border: 2px solid red;
-  padding: 0% 0% 3% 0%;
-}
 article header{
   float: left;
     width: 40%;
@@ -34,9 +23,12 @@ header{
 
 nav ul{
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 2fr 1fr;
 }
 nav ul li{
-  float: left;
+  /*float: left;
+  flex-direction: row;*/
   padding: 0% 3.5% 0% 3.5%;
   margin: 0 5px;
   font-size: 17px;
@@ -46,7 +38,7 @@ nav ul li{
   border: 2px solid black;
 }
 
-}
+
 #menu{
 display: flex;
 flex-direction: row;
@@ -58,6 +50,18 @@ text-align: center;
 nav a{
   color: white;
   text-decoration: none;
+}
+
+#h1{
+  font-family: Arial;
+  font-weight: bold;
+  color: #E4C5AF;
+  text-shadow: 3px 3px 7px #F4E1D7;
+  text-align: center;
+  /*font-size: 40px;*/
+  float: left;
+  border: 2px solid red;
+  /*padding: 0% 0% 3% 0%;*/
 }
 
 .tlacitka{
@@ -97,15 +101,17 @@ background-color: #074F57;
   box-shadow: 3px 3px 7px grey;
 }
 
-.cistic{
-  clear: both;
-}
 .article{
   height: auto;
   box-shadow: 3px 3px 7px grey;
       background: #74A57F;
-      margin-top: 8%;
+      margin-top: 75px;
 }
+
+.cistic{
+  clear: both;
+}
+
 .menuu:hover{
   background-color: #074F57;
   cursor: pointer;
