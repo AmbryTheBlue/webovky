@@ -7,6 +7,8 @@ footer{
 button{
   color: white;
 }
+<<<<<<< HEAD
+=======
 h1{
   font-family: Arial;
   font-weight: bold;
@@ -20,6 +22,7 @@ h1{
   margin: 0;
   align-items: center;
 }
+>>>>>>> 7911d7b22acd51dd36be7605d62afb4ad3647506
 article header{
   float: left;
     width: 40%;
@@ -127,7 +130,11 @@ background-color: #074F57;
   height: auto;
   box-shadow: 3px 3px 7px grey;
       background: #74A57F;
+<<<<<<< HEAD
+      margin-top: 75px;
+=======
       margin-top: 39px;
+>>>>>>> 7911d7b22acd51dd36be7605d62afb4ad3647506
 }
 
 .cistic{
