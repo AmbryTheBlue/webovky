@@ -11,12 +11,14 @@ h1{
   font-family: Arial;
   font-weight: bold;
   color: #E4C5AF;
-  text-shadow: 3px 3px 7px #F4E1D7;
+  text-shadow: 3px 3px 12px #F4E1D7;
   text-align: center;
   font-size: 40px;
   float: left;
-  border: 2px solid red;
-  padding: 0% 0% 3% 0%;
+  border: none;
+  padding: 0% 0% 0% 0%;
+  margin: 0;
+  align-items: center;
 }
 article header{
   float: left;
@@ -43,7 +45,16 @@ nav ul li{
   height: 73px;
   line-height: 4.3em;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #E4C5AF;
+  color: #E4C5AF;
+}
+
+nav ul li:hover{
+  cursor: pointer;
+  background: #9ECE9A;
+  border-color: white;
+  color: white;
+
 }
 
 }
@@ -55,6 +66,7 @@ font-size: 1.7em;
 text-align: center;
 }
 
+
 nav a{
   color: white;
   text-decoration: none;
@@ -63,7 +75,6 @@ nav a{
 .tlacitka{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
   padding: 120px 3px 3px 3px;
   margin: 3px 3px 3px 3px;
   box-shadow: 3px 3px 7px #667F62;
@@ -104,9 +115,12 @@ background-color: #074F57;
   height: auto;
   box-shadow: 3px 3px 7px grey;
       background: #74A57F;
-      margin-top: 8%;
+      margin-top: 39px;
 }
 .menuu:hover{
   background-color: #074F57;
   cursor: pointer;
+}
+
+#nadpis{border: none
 }
