@@ -1,9 +1,10 @@
 body{
-  background: #077187;
-  margin:100px 0px 0px 0px;
+  background: #555B6E;
+  margin:110px 0px 0px 0px;
 }
 footer{
-  color: white
+  color: white;
+  margin: 7px;
 }
 button{
   color: white;
@@ -12,8 +13,7 @@ button{
 h1{
   font-family: Arial;
   font-weight: bold;
-  color: #E4C5AF;
-  text-shadow: 3px 3px 12px #F4E1D7;
+  color: #FAF9F9;
   text-align: center;
   font-size: 40px;
   float: left;
@@ -51,15 +51,15 @@ nav ul li{
   height: 73px;
   line-height: 4.3em;
   text-align: center;
-  border: 2px solid #E4C5AF;
-  color: #E4C5AF;
+  border: 2px solid #FAF9F9;
+  color: #FAF9F9;
 }
 
 nav ul li:hover{
   cursor: pointer;
-  background: #9ECE9A;
-  border-color: white;
-  color: white;
+  background: #FCFC62;
+  border-color: #424242;
+  color: #424242;
 
 }
 
@@ -67,7 +67,7 @@ nav ul li:hover{
 font-family: Verdana;
 position: fixed;
 top: 0px;
-background: #077187;
+background: #555B6E;
 }
 
 
@@ -91,25 +91,27 @@ nav a{
 .tlacitka{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding: 120px 3px 3px 3px;
+  padding: 3px 3px 3px 3px;
   margin: 200px 10px 200px 10px;
   box-shadow: 3px 3px 7px #667F62;
-  border: 6px solid #263025;
+  border: 6px solid #555B6E;
   border-radius: 5px;
   width: 540px;
   height: 30%;
   text-align: center;
-  background: #9ECE9A;
+  background: #89B0AE;
+  position: relative;
+  left: 200px;
 }
 .button{
 font-family: Verdana;
 font-size: 2em;
 text-shadow: 1.5px 1.5px 5px #000000;
 padding: 15% 15% 15% 15%;
-border: 2px solid #000000;
+border: 2px solid #555B6E;
 border-radius: 10px;
 margin: 2% 2% 2% 2%;
-background-color: #074F57;
+background-color: #FCB9B2;
 }
 .button:hover{
   font-family: Verdana;
@@ -120,14 +122,14 @@ background-color: #074F57;
   border-radius: 10px;
   margin: 2% 2% 2% 2%;
   cursor: pointer;
-  background-color: #074F57;
+  background-color: #FBC4AB;
   box-shadow: 3px 3px 7px grey;
 }
 
 .article{
   height: auto;
   box-shadow: 3px 3px 7px grey;
-      background: #74A57F;
+      background: #BEE3DB;
       margin-top: 0;
 
 }
@@ -136,10 +138,20 @@ background-color: #074F57;
   clear: both;
 }
 
-.menuu:hover{
-  background-color: #074F57;
+.menu:hover{
+  background-color: #89B0AE;
   cursor: pointer;
 }
 
 #nadpis{border: none
+}
+
+#zadani{
+grid-area: 1 / 1 / 1 / 6;
+text-align: left;
+}
+
+#vysledek{
+  grid-area: 2 / 1 / 2 / 6;
+  text-align: right;
 }
