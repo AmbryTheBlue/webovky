@@ -1,5 +1,6 @@
 body{
   background: #077187;
+  margin:100px 0px 0px 0px;
 }
 footer{
   color: white
@@ -31,9 +32,9 @@ article section{
   float: left;
   width: 60%;
 }
-
-header{
-  height: 50px;
+ul{
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
 }
 
 nav ul{
@@ -44,7 +45,7 @@ nav ul{
 nav ul li{
   /*float: left;
   flex-direction: row;*/
-  padding: 0% 3.5% 0% 3.5%;
+  padding: 0% 3.5px 0% 3.5px;
   margin: 0 5px;
   font-size: 17px;
   height: 73px;
@@ -62,13 +63,11 @@ nav ul li:hover{
 
 }
 
-
 #menu{
-display: flex;
-flex-direction: row;
 font-family: Verdana;
-font-size: 1.7em;
-text-align: center;
+position: fixed;
+top: 0px;
+background: #077187;
 }
 
 
@@ -93,7 +92,7 @@ nav a{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 120px 3px 3px 3px;
-  margin: 3px 3px 3px 3px;
+  margin: 200px 10px 200px 10px;
   box-shadow: 3px 3px 7px #667F62;
   border: 6px solid #263025;
   border-radius: 5px;
@@ -129,7 +128,7 @@ background-color: #074F57;
   height: auto;
   box-shadow: 3px 3px 7px grey;
       background: #74A57F;
-      margin-top: 75px;
+      margin-top: 0;
 
 }
 
