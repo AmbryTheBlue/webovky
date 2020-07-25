@@ -155,3 +155,7 @@ text-align: left;
   grid-area: 2 / 1 / 2 / 6;
   text-align: right;
 }
+#zprava{
+  width: 50vh;
+  height: 20vh;
+}
