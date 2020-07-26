@@ -25,11 +25,11 @@ function pridejCislo(cislo){
 
 function pridejZnak(znak){
  if (cele.charAt(cele.length-1)==".") {
-   alert("Za desetinnou tečku nelze přidat žádný znak. Pouze číslice!")
+   alert("Za desetinnou tečku nelze přidat žádný znak. Pouze číslice!");
  }
  else if (znak==".") {
    if (vsechny_znaky.includes(cele.charAt(cele.length-1))||cele.length==0) {
-     alert("Za žádný znak (nebo prázdný text) není možné dát desetinnou tečku. Všechna desetinná čísla musí mít i číslici před desetinnou tečkou.")
+     alert("Za žádný znak (nebo prázdný text) není možné dát desetinnou tečku. Všechna desetinná čísla musí mít i číslici před desetinnou tečkou.");
    }
    else if(vsechny_cislice.includes(cele.charAt(cele.length-1))){
      //předchozí znak je číslice
@@ -77,11 +77,11 @@ function pridejZnak(znak){
        plz--;
      }
      else {
-       alert("Nelze přidat pravou závorku za něco jiného než číslici nebo pravou závorku")
+       alert("Nelze přidat pravou závorku za něco jiného než číslici nebo pravou závorku");
      }
    }
    else {
-     alert("Počet neuzavřených levých závorek je roven nule. (nebo je menší, ale to se snad neposralo). Nemůžete přidat pravou závroku!")
+     alert("Počet neuzavřených levých závorek je roven nule. (nebo je menší, ale to se snad neposralo). Nemůžete přidat pravou závroku!");
    }
  }
  zobraz();
@@ -159,7 +159,7 @@ function vyres(text){
     //cas na vypocet!
     var x = text.substring(a,c);
     console.log("x: " + x);
-    x = Number(x)
+    x = Number(x);
     var y = text.substring(c+1,b);
     console.log("y: " + y);
     y = Number(y);
