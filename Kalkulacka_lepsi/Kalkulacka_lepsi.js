@@ -9,7 +9,7 @@ var vsechny_cislice = "0123456789";
 function zobraz(){
   console.log("Zobrazeno aktuální:\n" + cele);
   console.log("Poslední znak: " + cele.charAt(cele.length-1));
-  //document.getElementById('Zapis').innerHTML = pole.join(" ");
+  document.getElementById('zadani').innerHTML = cele;
 }
 
 function pridejCislo(cislo){
@@ -184,28 +184,29 @@ function vyres(text){
     }
     //Prepsání počítaného vypočítaným
     text = text.replace(text.substring(a,b), z.toString());
-    console.log("Využit operátor: '" + oper + "'");
-    console.log("Jak to vyres() upravil: " + text);
+    //console.log("Využit operátor: '" + oper + "'");
+    //console.log("Jak to vyres() upravil: " + text);
   }
   console.log("Část (asi v závorkách) úspěšně vypočítána!");
   return text;
 }
 
 function vypocitej(){
-  console.log("Výpočet zatím moc nefunguje!");
+  console.log("Výpočet započat!!");
+  var kopie_cele = cele;
   if (plz!=0) {
     console.log("Počet závorek asi nesedí, a tak to nebude možné vypočítat. Uvidíme xD");
   }
   var chyba = 0;
   var bez = 1;
-  console.log("Aktuální text: " + cele);
-  while (cele.includes("(")) {
-    if (cele.includes(")")) {
-      var b = cele.indexOf(")");
-      var a = cele.substring(0,b).lastIndexOf("(");
-      var spocitano = vyres(cele.substring(a+1,b));
-      cele = cele.replace(cele.substring(a,b+1), spocitano);
-      console.log("Aktuální text: " + cele);
+  console.log("Aktuální text: " + kopie_cele);
+  while (kopie_cele.includes("(")) {
+    if (kopie_cele.includes(")")) {
+      var b = kopie_cele.indexOf(")");
+      var a = kopie_cele.substring(0,b).lastIndexOf("(");
+      var spocitano = vyres(kopie_cele.substring(a+1,b));
+      kopie_cele = kopie_cele.replace(kopie_cele.substring(a,b+1), spocitano);
+      console.log("Aktuální text: " + kopie_cele);
     }
     else {
       alert("Nesprávný počet závorek. Výpočet zrušen!");
@@ -216,15 +217,15 @@ function vypocitej(){
   }
   if (chyba>0) {
     console.log("Vyskytla se chyba: " + chyba);
+    document.getElementById('vysledek').innerHTML = "ERROR (podívej se do console pro více info)";
   }
   else {
-    cele = vyres(cele);
-    console.log("Výpočet dokončen! Výsledek je: " + cele);
+    kopie_cele = vyres(kopie_cele);
+    console.log("Výpočet dokončen! Výsledek je: " + kopie_cele);
+    document.getElementById('vysledek').innerHTML = kopie_cele;
     zobraz();
   }
 
 }
-
-
 
 console.log("Vítejte v javascriptu této Kalkulačky!");
