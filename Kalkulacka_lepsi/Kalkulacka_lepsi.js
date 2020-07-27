@@ -235,7 +235,7 @@ function vyres(text){
     text = text.replace("++","+");
     text = text.replace("+-","-");
     text = text.replace("-+","-");
-    text = text.replace("--","-");
+    text = text.replace("--","+");
     //console.log("Využit operátor: '" + oper + "'");
     //console.log("Jak to vyres() upravil: " + text);
   }
