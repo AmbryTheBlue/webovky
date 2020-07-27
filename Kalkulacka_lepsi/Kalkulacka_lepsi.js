@@ -102,9 +102,16 @@ function vymazCele(){
 
 function vyres(text){
   //vyresi text, který je předložen. Předpokládá neexistenci závorek.
+
+  //prvni uprava
+  text = text.replace("++","+");
+  text = text.replace("+-","-");
+  text = text.replace("-+","-");
+  text = text.replace("--","+");
   var oper = "";
   console.log("Co bylo zadano fci vyres() " + text);
   while (true) {
+    console.log("Nynější text: " + text);
     if (text.includes("*")) {
       oper = "*";
     }
@@ -125,8 +132,23 @@ function vyres(text){
     if(c==0){
       //operátor je na začátku řetězce
       if (oper=="+"||oper=="-") {
-        console.log("Řetězec (snad) úspěšně vypočítán!");
-        break;
+        var jiny_znak = false;
+        for (var i = 0; i < operatory.length; i++) {
+          jiny_znak = text.substring(1).includes(operatory.charAt(i))
+          if (jiny_znak) {
+            oper = operatory.charAt(i);
+            c = text.substring(1).indexOf(oper)+1;
+            break;
+          }
+        }
+        if (jiny_znak==false) {
+          console.log("Řetězec (snad) úspěšně vypočítán!");
+          break;
+        }
+        else {
+          console.log("Nalezeno + nebo - na začátku, ale není to jediný operátor. Vybrán jiný operátor a výpočet pokračuje!");
+        }
+
       }
       else {
         console.log("Nějakám způsobem se dostalo '*' nebo '/' na začátek řetězce :( Nelze vypočítat");
@@ -134,11 +156,15 @@ function vyres(text){
     }
     //systém pro nalezení pozice předchozího operátoru
     var a = 0;
+    var zapor = false;
     for (var i = 0; i < operatory.length; i++) {
       var pozice = text.substring(0,c).lastIndexOf(operatory.charAt(i));
       pozice = pozice+1;
       if (pozice>a) {
         a = pozice;
+        if (operatory.charAt(i)=="-") {
+          zapor = true;
+        }
       }
     }
     //systém pro nalezení následujícího operátoru
@@ -157,7 +183,12 @@ function vyres(text){
       }
     }
     //cas na vypocet!
-    var x = text.substring(a,c);
+    if(zapor){
+      var x = text.substring(a-1,c);
+    }
+    else {
+      var x = text.substring(a,c);
+    }
     console.log("x: " + x);
     x = Number(x);
     var y = text.substring(c+1,b);
@@ -183,7 +214,28 @@ function vyres(text){
         z = 1;
     }
     //Prepsání počítaného vypočítaným
-    text = text.replace(text.substring(a,b), z.toString());
+    if (z<0) {
+      if (zapor) {
+        text = text.replace(text.substring(a-1,b), z.toString());
+      }
+      else {
+          text = text.replace(text.substring(a,b), z.toString());
+      }
+    }
+    else {
+      if (zapor) {
+        text = text.replace(text.substring(a-1,b), "+" + z.toString());
+      }
+      else {
+        text = text.replace(text.substring(a,b), "+" + z.toString());
+      }
+
+    }
+    //uprava divnych kombinací operárotů
+    text = text.replace("++","+");
+    text = text.replace("+-","-");
+    text = text.replace("-+","-");
+    text = text.replace("--","-");
     //console.log("Využit operátor: '" + oper + "'");
     //console.log("Jak to vyres() upravil: " + text);
   }
